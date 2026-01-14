@@ -5,11 +5,15 @@ import { useState } from 'react'
 type ContactFormProps = {
   endpoint?: string
   submitLabel?: string
+  gapClass?: string
+  ptClass?: string
 }
 
 export default function ContactForm({
   endpoint = '/api/send-email',
   submitLabel = 'Gửi thông tin',
+  gapClass = 'gap-2.5',
+  ptClass = 'pt-[5px]',
 }: ContactFormProps) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -54,7 +58,7 @@ export default function ContactForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full lg:max-w-[446px] md:max-w-[300px] flex flex-col gap-2.5">
+    <form onSubmit={handleSubmit} className={`w-full lg:max-w-[446px] md:max-w-[300px] flex flex-col ${gapClass}`}>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -77,7 +81,7 @@ export default function ContactForm({
           placeholder="Số điện thoại"
         />
 
-      <div className="flex items-center gap-3">
+      <div className={`flex flex-col items-center ${gapClass} ${ptClass}`}>
         <button
           type="submit"
           disabled={loading}
