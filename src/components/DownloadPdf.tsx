@@ -3,8 +3,6 @@
 import { Images } from '@/contants/image';
 import Image from 'next/image';
 import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
-import { use } from 'react';
 
 export default function DownloadSection() {
     const documents = [
@@ -32,8 +30,8 @@ export default function DownloadSection() {
     
         await Promise.all(downloadPromises);
     
-        const content = await zip.generateAsync({ type: "blob" });
-        saveAs(content, "bo_tai_lieu_vinhomes_hai_van_bay.zip");
+        // const content = await zip.generateAsync({ type: "blob" });
+        // saveAs(content, "bo_tai_lieu_vinhomes_hai_van_bay.zip");
       };
 
   return (
