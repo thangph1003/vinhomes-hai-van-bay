@@ -141,7 +141,7 @@ export default function Header() {
               <div className="px-3 py-2">
                 <Link
                   href="/lien-he"
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 block text-center"
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 block text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Tư vấn ngay
