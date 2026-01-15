@@ -22,17 +22,17 @@ export default function VinhomesProject() {
           </h3>
         </div>
 
-        <h5 className="text-[#000000] max-w-[808px] leading-[24px] text-[16px] text-center font-normal font-montserrat mt-[25px]">
+        <p className="text-[#000000] max-w-[808px] leading-[24px] text-[16px] text-center font-normal font-montserrat mt-[25px]">
                 Là dấu ấn tiếp theo trong hệ sinh thái bất động sản cao cấp của Vingroup, 
                 Vinhomes Hải Vân Bay mang theo triết lý phát triển sống xanh, sống tinh tuyển và sống kết nối.
-        </h5>
+        </p>
       
         <div  className='max-w-[1151px] mt-[30px] mb-[74px] flex '>
           <div className='flex flex-col w-[26.9%] px-[30px] py-[40px] bg-[#FFFFFF] gap-[10px]'>
             <h4 className='font-crimson-text font-bold text-[28px] leading-[36px] text-[#DCA447] tracking-normal'>LƯNG TỰA NÚI MẶT HƯỚNG BIỂN</h4>
-            <h5 className='font-montserrat font-normal text-[16px] leading-[24px] tracking-normal'> Dự án hội tụ trọn vẹn hệ giá trị sống toàn diện: tiện ích đỉnh cao, dịch vụ chuyên biệt, cộng đồng chọn lọc, và trên hết là một phong cách sống 
+            <p className='font-montserrat font-normal text-[16px] leading-[24px] tracking-normal'> Dự án hội tụ trọn vẹn hệ giá trị sống toàn diện: tiện ích đỉnh cao, dịch vụ chuyên biệt, cộng đồng chọn lọc, và trên hết là một phong cách sống 
                   “gắn kết với thiên nhiên, đậm chất tinh hoa”. Với tầm nhìn hướng về phát triển bền vững và hội nhập quốc tế, dự án được kỳ vọng sẽ trở thành biểu tượng mới của miền Trung
-                  - điểm đến của cư dân tinh hoa, nhà đầu tư và du khách thế giới.</h5>
+                  - điểm đến của cư dân tinh hoa, nhà đầu tư và du khách thế giới.</p>
           </div>
 
           <div className="w-[73.1%]">
