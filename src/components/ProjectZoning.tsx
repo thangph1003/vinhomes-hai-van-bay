@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ContactForm from '@/components/ContactForm'
+import ContactForm from './ContactForm'
 
 type ProjectZoningProps = {
   imageSrc?: string
@@ -10,7 +10,7 @@ type ProjectZoningProps = {
 export default function ProjectZoning({
   imageSrc = '/images/img-footer.webp',
   title = 'Bảng giá VINHOMES HẢI VÂN BAY T01/2026',
-  subtitle = 'Các tài liệu khách hàng nhận được gồm: Bảng giá đợt 1 ưu đãi, Thiết kế mặt bằng và chi tiết căn hộ, Chính sách bán hàng và Tiến độ thanh toán',
+  subtitle= 'Các tài liệu khách hàng nhận được gồm: Bảng giá đợt 1 ưu đãi, Thiết kế mặt bằng và chi tiết căn hộ, Chính sách bán hàng và Tiến độ thanh toán'
 }: ProjectZoningProps) {
   return (
     <>
@@ -24,7 +24,7 @@ export default function ProjectZoning({
         <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
       </div>
     </section>
-    <section className="relative">
+    <section id="san-pham-chinh" className="relative">
       <div className="w-full">
         <Image
           src="/images/project-subdivision.webp"

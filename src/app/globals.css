@@ -25,6 +25,10 @@ body {
   font-family: var(--font-crimson-text), serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Utility classes for font switching */
 .font-montserrat {
   font-family: var(--font-montserrat), sans-serif;

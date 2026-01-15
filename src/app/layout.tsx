@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { generateMetadata } from "@/lib/generateMetadata";
+import PopupForm from "@/components/PopupForm";
 
 const crimsonText = Crimson_Text({
   variable: "--font-crimson-text",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <main className="grow">
           {children}
         </main>
+        <PopupForm />
         <Footer />
       </body>
     </html>

@@ -36,7 +36,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
   return (
     <>
       {/* TOP: Map + Right text */}
-      <section className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top h-[742px]">
+      <section id="vi-tri-du-an" className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top h-[742px]">
         <div className="max-w-[1152px] mx-auto">
           <div className="w-[411px] flex flex-col justify-self-end absolute bottom-[135px] text-end z-1">
             <h3 className="text-[44px] leading-[57px] text-[#162B75] font-bold font-crimson-text">VỊ TRÍ ĐỘC BẢN</h3>
@@ -47,7 +47,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </section>
 
       {/* MIDDLE: Cards */}
-      <div className="max-w-[1152px] mx-auto -mt-[107.5px]">
+      <div className="max-w-[1152px] mx-auto -mt-[107.5px] overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, idx) => {
             const fromLeft = idx < 2
@@ -82,7 +82,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </div>
 
       {/* BOTTOM: Left text + Right image */}
-      <section className="max-w-[1152px] mx-auto pt-[37px] pb-[98px] flex flex-col gap-[37px]">
+      <section id="tien-ich" className="max-w-[1152px] mx-auto pt-[37px] pb-[98px] flex flex-col gap-[37px]">
         <div className="flex gap-6">
             <div className="w-1/2 flex flex-col gap-[11px]">
                 <h2 className="text-[28px] leading-[36px] font-bold font-crimson-text text-[#DCA447]">ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</h2>
