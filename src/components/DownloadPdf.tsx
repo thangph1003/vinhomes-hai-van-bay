@@ -1,6 +1,5 @@
 'use client'
 
-import { Images } from '@/contants/image';
 import Image from 'next/image';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
@@ -60,7 +59,7 @@ export default function DownloadSection() {
                 <a href={`/pdfFiles/${doc.src}`} download={doc.src} key={index} className="flex items-center gap-[5px] pr-[14px] border-r-2 border-[#162B75] last:border-none min-w-0">
                    <div className="flex items-center justify-center w-[40px] h-[40px] ">
         <div           className=" w-[30px] h-[40px]"> 
-             <Image    src={Images.pdfIcon}
+             <Image    src="/images/pdf-icon.svg"
                    alt="pdfIcon"
                     height={40}
                     width={30}
