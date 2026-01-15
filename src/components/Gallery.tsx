@@ -18,7 +18,7 @@ export default function Gallery({
   ],
 }: GalleryProps) {
   return (
-    <section className="pt-[50px] pb-[91px] bg-[#F5F1E6]">
+    <section id="tien-do" className="pt-[50px] pb-[91px] bg-[#F5F1E6]">
       <div className="max-w-[1152px] mx-auto flex flex-col gap-10">
         <h2 className="text-[44px] leading-[57px] font-bold font-crimson-text text-[#162B75] text-center">
           {title}

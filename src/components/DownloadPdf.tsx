@@ -3,7 +3,6 @@
 import { Images } from '@/contants/image';
 import Image from 'next/image';
 import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
 
 export default function DownloadSection() {
     const documents = [
@@ -31,13 +30,14 @@ export default function DownloadSection() {
     
         await Promise.all(downloadPromises);
     
-        const content = await zip.generateAsync({ type: "blob" });
-        saveAs(content, "bo_tai_lieu_vinhomes_hai_van_bay.zip");
+        // const content = await zip.generateAsync({ type: "blob" });
+        // saveAs(content, "bo_tai_lieu_vinhomes_hai_van_bay.zip");
       };
 
   return (
 
     <section 
+    id="tong-quan"
       className="w-full h-[450px]  mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
     >
 
