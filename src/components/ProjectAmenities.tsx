@@ -49,7 +49,7 @@ export default function ProjectAmenities() {
         />
 
         <div className='my-[30px] w-full flex gap-[24px]'>
-            <h4 className='w-[23.8%] font-crimson-text font-bold text-[28px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h4>
+            <h2 className='w-[23.8%] font-crimson-text font-bold text-[28px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
             <p className='w-[73.9%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
                 còn là không gian sống thượng lưu với hệ tiện ích nội khu được quy hoạch bài bản, đáp ứng trọn vẹn mọi nhu cầu từ an cư, nghỉ dưỡng đến giải trí 
                 - giáo dục - chăm sóc sức khỏe.</p>
@@ -74,9 +74,9 @@ export default function ProjectAmenities() {
                     </div>
 
                     <div className="flex-1 flex items-center justify-center p-[20px] text-center transition-colors duration-300 group-hover:bg-[#DCA447]">
-                        <h5 className="text-[#162B75] font-bold text-[16px] leading-[24px] uppercase transition-colors duration-300 group-hover:text-white font-montserrat">
+                        <h3 className="text-[#162B75] font-bold text-[16px] leading-[24px] uppercase transition-colors duration-300 group-hover:text-white font-montserrat">
                         {item.title}
-                        </h5>
+                        </h3>
                     </div>
                     </div>
                 ))}
