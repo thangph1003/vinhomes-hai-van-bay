@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Footer() {
 
   return (
-    <footer id="lien-he" className="relative text-gray-900 bg-[url('/images/img-footer.webp')] bg-cover bg-center">
+    <footer id="lien-he" className="relative bg-[url('/images/img-footer.webp')] bg-cover bg-center">
       <div className="absolute inset-y-0 left-0 w-1/2 bg-[#F6E9D5E5] z-0" />
       <div className="max-w-[1152px] mx-auto relative z-10">
         <div className="flex">

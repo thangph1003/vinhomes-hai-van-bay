@@ -9,6 +9,7 @@ import ProjectZoning from "@/components/ProjectZoning";
 import TravelCards from "@/components/TravelCard";
 import VideoProject from "@/components/VideoProject";
 import VinhomesProject from "@/components/VinhomesProject";
+import SplitFeature from "@/components/SplitFeature";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <TravelCards />
       <ProjectAmenities/>
       <ProjectZoning />
+      <SplitFeature />
       <ProjectProducts />
       <FormPrice />
       <Gallery />
