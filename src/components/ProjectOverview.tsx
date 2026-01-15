@@ -9,7 +9,7 @@ export default function ProjectOverview() {
         </h2>
 
         <div className="relative z-10 flex flex-col items-center gap-[5px]">
-          <Image src="/images/logo.png" alt="Project overview" width={62} height={57} className="w-[62px] h-[57px] object-contain" />
+          <Image src="/images/logo-cropped.png" alt="Project overview" width={62} height={57} className="w-[62px] h-[57px] object-contain" />
           <h3 className="text-[44px] leading-[57px] font-bold font-crimson-text text-[#162B75]">TỔNG QUAN DỰ ÁN</h3>
         </div>
 

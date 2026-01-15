@@ -3,6 +3,7 @@ import DownloadSection from "@/components/DownloadPdf"
 import FormPrice from "@/components/FormPrice";
 import Gallery from "@/components/Gallery";
 import ProjectOverview from "@/components/ProjectOverview";
+import ProjectProducts from "@/components/ProjectProducts";
 import ProjectZoning from "@/components/ProjectZoning";
 import TravelCards from "@/components/TravelCard";
 import VideoProject from "@/components/VideoProject";
@@ -19,6 +20,7 @@ export default function Home() {
       <FormPrice />
       <TravelCards />
       <ProjectZoning />
+      <ProjectProducts />
       <FormPrice />
       <Gallery />
     </div>
