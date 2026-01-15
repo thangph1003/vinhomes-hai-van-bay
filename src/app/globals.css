@@ -33,3 +33,13 @@ body {
 .font-crimson-text {
   font-family: var(--font-crimson-text), serif;
 }
+
+.aos-fade {
+  transform: translateX(1600px);
+  opacity: 0;
+  transition: transform 1000ms ease-out, opacity 1000ms ease-out;
+}
+.aos-animate.aos-fade {
+  transform: translateX(0);
+  opacity: 1;
+}
