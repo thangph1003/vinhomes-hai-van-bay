@@ -59,7 +59,7 @@ export default function ContactForm({
     }
   }
 
-  const defaultFormClass = `w-full lg:max-w-[446px] md:max-w-[300px] flex flex-col ${gapClass}`
+  const defaultFormClass = `w-full lg:max-w-[446px] md:max-w-full flex flex-col ${gapClass}`
 
   return (
     <form onSubmit={handleSubmit} className={formClass ?? defaultFormClass}>
