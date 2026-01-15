@@ -5,7 +5,7 @@ const SITE_URL = process.env.SITE_URL
 export function generateMetadata(): Metadata {
   const ogUrl = `${SITE_URL}/images/banner.webp`;
   const logoUrl = `${SITE_URL}/images/logo.png`;
-  const appleIconUrl = `${SITE_URL}/images/apple-touch-icon.png`;
+  const appleIconUrl = `${SITE_URL}/images/logo.png`;
 
   return {
     title: {

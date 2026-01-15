@@ -23,7 +23,7 @@ export async function POST(req: Request) {
 
     if (!smtpHost || !smtpUser || !smtpPass) {
       return NextResponse.json(
-        { error: 'SMTP not configured. Set SMTP_HOST/SMTP_USER/SMTP_PASS in .env.local' },
+        { error: 'Có lỗi khi gửi thông tin. Vui lòng thử lại sau.' },
         { status: 500 }
       )
     }
