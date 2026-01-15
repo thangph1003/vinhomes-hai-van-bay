@@ -42,10 +42,10 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-lg top-0 z-50">
-      <div className="max-w-[1149px] mx-auto">
-        <div className="flex justify-between items-center pt-[11px] pb-3">
+      <div className="max-w-[1149px] mx-auto flex flex-col gap-[30px]">
+        <div className="flex justify-between items-center md:pt-[11px] md:pb-3 py-2.5 px-[33px]">
           {/* Logo */}
-          <Link href="/" className="w-[97px] h-[43px]">
+          <Link href="/" className="md:w-[97px] md:h-[43px] w-[78px] h-[35px]">
             <Image src="/images/logo.png" alt="Vinhomes Hải Vân Bay" width={100} height={100} className="w-full h-full object-cover" />
           </Link>
 
@@ -83,33 +83,28 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden h-5">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 p-2"
+              className="text-[#162B75] hover:text-blue-600 md:p-2 p-0"
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
+              {isMenuOpen ? (
+                <Image
+                  src="/images/close.svg"
+                  alt="Close menu"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5 object-contain"
+                />
+              ) : (
+                <Image
+                  src="/images/menu.svg"
+                  alt="Menu"
+                  width={30}
+                  height={30}
+                  className="w-[30px] h-[30px] object-contain"
+                />
+              )}
             </button>
           </div>
         </div>
@@ -117,7 +112,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-50 border-t">
+            <div className="h-screen px-5 flex flex-col gap-[15px]">
               {navItems.map((item) => {
                 const isActive = item.href === '/'
                   ? pathname === '/' && !activeSection
@@ -127,10 +122,10 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-3 py-2 text-base ${
+                    className={`block pb-[15px] border-b-[1.5px] border-[#EBEBEB] text-base leading-[28px] text-[#162B75] ${
                       isActive
-                        ? 'text-[#162B75] font-bold'
-                        : 'text-gray-700 hover:text-blue-600 font-medium'
+                        ? 'font-bold'
+                        : 'font-normal'
                     }`}
                     onClick={() => handleNavClick(item.href)}
                   >
@@ -138,15 +133,6 @@ export default function Header() {
                   </Link>
                 )
               })}
-              <div className="px-3 py-2">
-                <Link
-                  href="/lien-he"
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 block text-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Tư vấn ngay
-                </Link>
-              </div>
             </div>
           </div>
         )}
