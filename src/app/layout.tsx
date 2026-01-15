@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { generateMetadata } from "@/lib/generateMetadata";
 import PopupForm from "@/components/PopupForm";
+import FloatingCTA from "@/components/FloatingCTA";
 
 const crimsonText = Crimson_Text({
   variable: "--font-crimson-text",
@@ -37,6 +38,7 @@ export default function RootLayout({
           {children}
         </main>
         <PopupForm />
+        <FloatingCTA />
         <Footer />
       </body>
     </html>
