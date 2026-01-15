@@ -4,6 +4,7 @@ import FormPrice from "@/components/FormPrice";
 import Gallery from "@/components/Gallery";
 import ProjectOverview from "@/components/ProjectOverview";
 import ProjectProducts from "@/components/ProjectProducts";
+import ProjectAmenities from "@/components/ProjectAmenities";
 import ProjectZoning from "@/components/ProjectZoning";
 import TravelCards from "@/components/TravelCard";
 import VideoProject from "@/components/VideoProject";
@@ -19,6 +20,7 @@ export default function Home() {
       <ProjectOverview />
       <FormPrice />
       <TravelCards />
+      <ProjectAmenities/>
       <ProjectZoning />
       <ProjectProducts />
       <FormPrice />
