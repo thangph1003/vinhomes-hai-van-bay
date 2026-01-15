@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = process.env.SITE_URL ?? "https://vinhomes-hai-van-bay.vercel.app";
+const SITE_URL = process.env.SITE_URL
 
 export function generateMetadata(): Metadata {
   const ogUrl = `${SITE_URL}/images/banner.webp`;
@@ -50,11 +50,11 @@ export function generateMetadata(): Metadata {
       creator: "@vinhomes",
     },
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       googleBot: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
