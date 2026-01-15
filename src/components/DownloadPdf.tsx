@@ -38,20 +38,20 @@ export default function DownloadSection() {
   return (
 
     <section 
-      className="w-full px-[145px] py-[65px] mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
+      className="w-full h-[450px]  mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
     >
 
-      <div className=" flex flex-col items-center gap-[40px]">
+      <div className=" max-w-[1152px] xl:px-0 lg:px-4 md:px-4 flex flex-col items-center gap-[40px]">
         
 
-        <h2 className={`font-crimson-text max-w-[808px] text-[22px] font-semibold leading-[100%] text-center text-[#162B75]`}>
+        <h2 className={`font-crimson-text px-[172px] text-[22px] font-semibold leading-[29px] text-center text-[#162B75]`}>
           Vinhomes Hải Vân Bay là một trong những dự án bất động sản nghỉ dưỡng nổi bật nhất
           tại Đà Nẵng, được phát triển bởi Tập đoàn Vingroup - thương hiệu hàng đầu trong lĩnh
           vực bất động sản Việt nam
         </h2>
 
 
-        <div className="max-w-[1150px] bg-white px-[39px] py-[30px] flex items-center justify-between">
+        <div className="w-full bg-white px-[39px] py-[30px] flex items-center justify-between">
             
       
         <div className="flex items-center max-w-[1072px] gap-[15px]">
@@ -83,7 +83,7 @@ export default function DownloadSection() {
         </div>
 
       
-        <p className={`font-montserrat max-w-[808px] text-[16px] leading-[24px] text-center font-normal text-black`}>
+        <p className={`font-montserrat px-[172px] text-[16px] leading-[24px] text-center font-normal text-black`}>
           Vinhomes sẽ không ngừng nỗ lực để kiến tạo nên những Khu đô thị đáng sống và đẳng cấp bậc
           nhất Việt Nam với khát khao mang đến 1 cuộc sống tốt đẹp hơn cho tất cả mọi người.    
         </p>
