@@ -47,3 +47,56 @@ html {
   transform: translateX(0);
   opacity: 1;
 }
+
+@keyframes cta-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+.floating-cta {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 9999px;
+}
+
+.cta-ring {
+  position: absolute;
+  border-radius: 9999px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation-name: cta-pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.cta-ring-inner {
+  animation-duration: 1.6s;
+}
+
+.cta-ring-outer {
+  animation-duration: 2.4s;
+}
