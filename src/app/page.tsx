@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import DownloadSection from "@/components/DownloadPdf"
 import FormPrice from "@/components/FormPrice";
 import Gallery from "@/components/Gallery";
+import ProjectOverview from "@/components/ProjectOverview";
 import ProjectZoning from "@/components/ProjectZoning";
 import TravelCards from "@/components/TravelCard";
 import VideoProject from "@/components/VideoProject";
@@ -14,6 +15,7 @@ export default function Home() {
       <DownloadSection/>
       <VinhomesProject/>
       <VideoProject />
+      <ProjectOverview />
       <FormPrice />
       <TravelCards />
       <ProjectZoning />
