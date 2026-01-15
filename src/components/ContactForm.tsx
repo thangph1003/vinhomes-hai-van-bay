@@ -7,13 +7,15 @@ type ContactFormProps = {
   submitLabel?: string
   gapClass?: string
   ptClass?: string
+  formClass?: string
 }
 
 export default function ContactForm({
   endpoint = '/api/send-email',
-  submitLabel = 'Gửi thông tin',
+  submitLabel = 'Xem thêm',
   gapClass = 'gap-2.5',
   ptClass = 'pt-[5px]',
+  formClass,
 }: ContactFormProps) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -57,8 +59,10 @@ export default function ContactForm({
     }
   }
 
+  const defaultFormClass = `w-full lg:max-w-[446px] md:max-w-[300px] flex flex-col ${gapClass}`
+
   return (
-    <form onSubmit={handleSubmit} className={`w-full lg:max-w-[446px] md:max-w-[300px] flex flex-col ${gapClass}`}>
+    <form onSubmit={handleSubmit} className={formClass ?? defaultFormClass}>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -81,11 +85,11 @@ export default function ContactForm({
           placeholder="Số điện thoại"
         />
 
-      <div className={`flex flex-col items-center ${gapClass} ${ptClass}`}>
+      <div className={`flex flex-col items-center w-full ${gapClass} ${ptClass}`}>
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#DCA447] hover:bg-amber-500 translation-all duration-300 w-full text-center py-[11px] text-base leading-6 font-normal font-montserrat text-white"
+          className="bg-[#DCA447] hover:bg-white hover:text-[#162B75] hover:cursor-pointer translation-all duration-300 w-full text-center py-[11px] text-base leading-6 font-normal font-montserrat text-white"
         >
           {loading ? 'Đang gửi...' : submitLabel}
         </button>

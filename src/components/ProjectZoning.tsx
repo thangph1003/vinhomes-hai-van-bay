@@ -21,7 +21,7 @@ export default function ProjectZoning({
       <div className="flex flex-col gap-5 max-w-[461px] mx-auto p-10 relative z-10 bg-[#162B75] my-[125px]">
        <div className="flex flex-col gap-2.5 text-center"> <h3 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">{title}</h3>
        <p className="text-sm leading-6 text-white font-normal font-montserrat">{subtitle}</p></div>
-        <ContactForm submitLabel="Xem thêm" gapClass='gap-[15px]' ptClass='pt-[5px]' />
+        <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
       </div>
     </section>
     <section className="relative">

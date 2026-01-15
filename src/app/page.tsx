@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import DownloadSection from "@/components/DownloadPdf"
+import FormPrice from "@/components/FormPrice";
 import ProjectZoning from "@/components/ProjectZoning";
 import TravelCards from "@/components/TravelCard";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Banner />
       <DownloadSection/>
+      <FormPrice />
       <TravelCards />
       <ProjectZoning />
     </div>
