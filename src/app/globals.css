@@ -100,3 +100,11 @@ html {
 .cta-ring-outer {
   animation-duration: 2.4s;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
