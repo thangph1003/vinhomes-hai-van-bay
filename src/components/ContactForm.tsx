@@ -93,8 +93,8 @@ export default function ContactForm({
         >
           {loading ? 'Đang gửi...' : submitLabel}
         </button>
-        {message && <p className="text-sm text-green-600">{message}</p>}
-        {error && <p className="text-sm text-red-600">{error}</p>}
+        {message && <p className="text-base text-green-600">{message}</p>}
+        {error && <p className="text-base text-red-600">{error}</p>}
       </div>
     </form>
   )
