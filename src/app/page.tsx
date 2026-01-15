@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Banner />
-      {/* <DownloadSection/> */}
+      <DownloadSection/>
       <VinhomesProject/>
       <VideoProject />
       <ProjectOverview />
@@ -23,8 +23,8 @@ export default function Home() {
       <TravelCards />
       <ProjectAmenities/>
       <ProjectZoning />
-      {/* <SplitFeature /> */}
-      {/* <ProjectProducts /> */}
+      <SplitFeature />
+      <ProjectProducts />
       <FormPrice />
       <Gallery />
     </div>
