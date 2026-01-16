@@ -16,25 +16,25 @@ export default function ProjectAmenities() {
       ];
 
   return (
-    <section className="relative w-full bg-[#F5F1E6] overflow-hidden flex flex-col items-center">
-    <div className='flex flex-col max-w-[1153px] mb-[59px] items-center'>
+    <section className="relative w-full bg-[#F6E9D5] overflow-hidden flex flex-col items-center">
+    <div className='flex flex-col max-w-[1153px] md:px-0 pl-[33px] pr-[32px] md:mb-[59px] mb-[41px] items-center'>
       <div className="absolute top-0 text-center z-0 select-none pointer-events-none">
-        <h2 className="text-[200px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal leading-[260px]">
+        <h2 className="md:text-[200px] text-[150px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal md:leading-[260px] leading-[195px]">
           VINHOMES
         </h2>
       </div>
 
-      <div className=" z-10 pt-[73px] flex flex-col justify-center items-center">
+      <div className=" z-10 md:pt-[73px] pt-[48px] flex flex-col justify-center items-center">
         <div className="flex flex-col gap-[5px] max-w-[653px] items-center">
-         <Image src="/images/logo-cropped.png" alt='logo' width="62" height="57" className='w-[62px] h-[57px]'></Image>
+         <Image src="/images/logo-cropped.png" alt='logo' width="62" height="57" className='md:w-[62px] md:h-[57px] w-[33px] h-[30px]'></Image>
 
-          <h3 className="font-crimson-text w-full text-[#162B75] text-[44px] font-bold leading-[57px] tracking-normal">
+          <h3 className="font-crimson-text md:px-0 px-[20px] w-full text-[#162B75] md:text-[44px] text-[32px] font-bold md:leading-[57px] leading-[42px] tracking-normal text-center">
                 MẶT BẰNG TIỆN ÍCH DỰ ÁN
           </h3>
         </div>
       </div>
 
-      <p className="text-[#000000] max-w-[808px] leading-[24px] text-[16px] text-center font-normal font-montserrat mt-[25px] mb-[40px]">
+      <p className="text-[#000000] max-w-[808px] w-full leading-[24px] text-[16px] text-center font-normal font-montserrat md:mt-[25px] mt-[20px] md:mb-[40px] mb-[24px]">
                 Được kiến tạo theo mô hình “thành phố nghỉ dưỡng” giữa thiên nhiên nguyên bản, Vinhomes Hải Vân Bay gây ấn tượng với hệ tiện ích nội khu đẳng cấp, 
                 đồng thời ghi dấu bởi khả năng kết nối linh hoạt đến chuỗi tiện ích ngoại khu toàn diện.
         </p>
@@ -48,9 +48,9 @@ export default function ProjectAmenities() {
             sizes="100vw"
         />
 
-        <div className='my-[30px] w-full flex gap-[24px]'>
-            <h2 className='w-[23.8%] font-crimson-text font-bold text-[28px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
-            <p className='w-[73.9%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
+        <div className='md:my-[30px] my-[20px] w-full flex md:flex-row flex-col md:gap-[24px] gap-[10px]'>
+            <h2 className='md:w-[23.8%] md:h-auto w-auto h-[27.3%] font-crimson-text font-bold md:text-[28px] text-[26px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
+            <p className='md:w-[73.9%] md:h-auto w-auto h-[69%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
                 còn là không gian sống thượng lưu với hệ tiện ích nội khu được quy hoạch bài bản, đáp ứng trọn vẹn mọi nhu cầu từ an cư, nghỉ dưỡng đến giải trí 
                 - giáo dục - chăm sóc sức khỏe.</p>
         </div>
