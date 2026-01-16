@@ -17,7 +17,7 @@ export default function ProjectAmenities() {
 
   return (
     <section className="relative w-full bg-[#F6E9D5] overflow-hidden flex flex-col items-center">
-    <div className='flex flex-col max-w-[1153px] md:px-0 pl-[33px] pr-[32px] md:mb-[59px] mb-[41px] items-center'>
+    <div className='flex flex-col max-w-[1153px] md:px-[32px] xl:px-0 pl-[33px] pr-[32px] md:mb-[59px] mb-[41px] items-center'>
       <div className="absolute top-0 text-center z-0 select-none pointer-events-none">
         <h2 className="md:text-[200px] text-[150px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal md:leading-[260px] leading-[195px]">
           VINHOMES
