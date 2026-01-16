@@ -67,11 +67,12 @@ const products: Product[] = [
 
   return (
     <section className="w-full">
-        <div className="w-full relative bg-[url('/images/banner-subdivision.webp')] bg-right bg-no-repeat h-[714px] bg-size-[62.8%_100%]">
-        <div className="absolute inset-y-0 left-0 w-[37.2%] [@media(min-width:1440px)]:w-[40%] bg-[#F5F1E6] z-0" />
+        <div className="w-full relative bg-[url('/images/banner-subdivision.webp')] bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[590px] bg-size-[62.8%_100%]">
+        <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#F5F1E6] z-0" />
 
         <div className="max-w-[1152px] mx-auto relative h-full">
-          <div className="absolute left-0 w-[32.39%] px-[30px] py-10 z-10 flex flex-col gap-2.5">
+          <div className="absolute left-0 lg:w-[32.39%] w-full lg:px-[30px] lg:py-10 z-10 flex flex-col lg:gap-2.5 gap-[26px]">
+            <div className="flex flex-col gap-2.5 lg:p-0 pt-[152px] px-[42.5px]">
             <h3 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">PHÂN KHU CHÂU ÂU</h3>
             <p className="text-base leading-6 font-montserrat text-black">
               Khu vực Châu Âu được thiết kế theo phong cách sang trọng, tinh tế, tái hiện kiến trúc cổ điển phương Tây.
@@ -91,9 +92,11 @@ const products: Product[] = [
                 </article>
               )
             })}
+            </div>
           </div>
+          
 
-          <div className="absolute left-0 bottom-[25px] z-20 pointer-events-auto">
+          <div className="absolute top-[30px] lg:bottom-[25px] lg:top-auto left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 z-20 pointer-events-auto">
             <div className="flex items-center">
               {items.map((item, idx) => {
                 const active = idx === activeIndex
@@ -105,13 +108,13 @@ const products: Product[] = [
                       setActiveIndex(idx)
                       startInterval()
                     }}
-                    className={`shrink-0 hover:cursor-pointer rounded-full flex flex-col items-center justify-center transition-all duration-300 w-[240px] h-[240px] ${idx !== 0 ? '-ml-[55px]' : ''} ${
+                    className={`shrink-0 hover:cursor-pointer rounded-full flex flex-col items-center justify-center transition-all duration-300 lg:w-[240px] lg:h-[240px] w-[102px] h-[102px] ${idx !== 0 ? 'lg:-ml-[55px] -ml-4' : ''} ${
                       active ? 'bg-[#FFFFFF66]' : 'bg-none'
                     }`}
                     aria-pressed={active}
                   >
-                    <div className={`w-[130px] h-[130px] rounded-full flex items-center justify-center ${active ? 'bg-[#DCA447]' : 'bg-[#162B75]'}`}>
-                      <span className="text-white text-sm font-bold text-center px-6 py-[34px]">
+                    <div className={`lg:w-[130px] lg:h-[130px] w-[70px] h-[70px] rounded-full flex items-center justify-center ${active ? 'bg-[#DCA447]' : 'bg-[#162B75]'}`}>
+                      <span className="text-white lg:text-sm text-[10px] leading-[13px] font-bold text-center lg:px-6 lg:py-[34px] px-[9.5px] py-3">
                         {item.title}
                       </span>
                     </div>
@@ -122,6 +125,8 @@ const products: Product[] = [
           </div>
         </div>
       </div>
+      <div className="lg:hidden block h-[310px] w-full bg-[url('/images/banner-subdivision.webp')] bg-bottom bg-center bg-cover bg-no-repeat">
+            </div>
     </section>
   )
 }
