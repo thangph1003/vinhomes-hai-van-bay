@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProjectOverview() {
   return (
-    <section className="bg-[#F6E9D5]">
+    <section id="tong-quan" className="bg-[#F6E9D5]">
       <div className="max-w-[1152px] mx-auto relative md:pt-[73px] md:pb-[52px] pt-[59px] pb-[35px]">
         <h2 className="absolute inset-x-0 top-8 z-0 text-center md:text-[200px] text-[150px] leading-[200px] text-[#F0E0C680] font-normal font-crimson-text select-none pointer-events-none">
           LÀNG VÂN
@@ -13,7 +13,7 @@ export default function ProjectOverview() {
           <h3 className="md:text-[44px] text-[32px] md:leading-[57px] leading-[42px] font-bold font-crimson-text text-[#162B75]">TỔNG QUAN DỰ ÁN</h3>
         </div>
 
-        <div className="relative z-10 md:mt-11 mt-6 mx-4 md:mx-0 bg-white">
+        <div className="relative z-10 md:mt-11 mt-6 mx-4 md:mx-[32.5px] xl:mx-0 bg-white">
           <div className="md:px-[30px] md:pt-[30px] md:pb-[150px] pt-[30px] pb-[100px] px-5">
             <div className="flex flex-col md:gap-[14px] gap-2.5">
               <div className="flex md:flex-row flex-col items-start md:gap-6 gap-[5px] md:pb-[14px] pb-2.5 border-b border-[#F0E0C6]">
@@ -59,14 +59,14 @@ export default function ProjectOverview() {
           </div>
         </div>
 
-        <div className="max-w-[1152px] mx-auto flex md:grid gap-6 md:-mt-[114.5px] -mt-[100px] z-20 relative overflow-x-auto md:overflow-visible hide-scrollbar snap-x snap-mandatory" style={{ WebkitOverflowScrolling: "touch" }}>
-          <div className="flex-none w-[77%] md:w-1/3 overflow-hidden snap-start">
+        <div className="max-w-[1152px] mx-auto md:px-[32.5px] xl:px-0 flex md:grid md:grid-cols-3 gap-6 md:-mt-[114.5px] -mt-[100px] z-20 relative overflow-x-auto md:overflow-visible hide-scrollbar snap-x snap-mandatory" style={{ WebkitOverflowScrolling: "touch" }}>
+          <div className="flex-none w-[77%] md:w-full overflow-hidden snap-start">
             <Image src="/images/project-overview-02.webp" alt="thumb 1" width={380} height={229} className="w-full md:h-[229px] h-[159px] object-cover hover:scale-105 transition-all duration-300" />
           </div>
-          <div className="flex-none w-[77%] md:w-1/3 overflow-hidden snap-start">
+          <div className="flex-none w-[77%] md:w-full overflow-hidden snap-start">
             <Image src="/images/project-overview-01.webp" alt="thumb 2" width={380} height={229} className="w-full md:h-[229px] h-[159px] object-cover hover:scale-105 transition-all duration-300" />
           </div>
-          <div className="flex-none w-[77%] md:w-1/3 overflow-hidden snap-start">
+          <div className="flex-none w-[77%] md:w-full overflow-hidden snap-start">
             <Image src="/images/project-overview-03.webp" alt="thumb 3" width={380} height={229} className="w-full md:h-[229px] h-[159px] object-cover hover:scale-105 transition-all duration-300" />
           </div>
         </div>

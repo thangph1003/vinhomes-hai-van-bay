@@ -23,26 +23,37 @@ export default function SplitFeature({
   intervalMs = 5000,
 }: SplitFeatureProps) {
   const defaultItems: FeatureItem[] = [
-    { id: 'eu', title: 'PHÂN KHU CHÂU ÂU', description: 'Khu vực Châu Âu được thiết kế theo phong cách sang trọng, tinh tế.' },
-    { id: 'asia', title: 'PHÂN KHU CHÂU Á', description: 'Khu vực Châu Á chú trọng phong cách bản địa, mật độ thấp.' },
-    { id: 'jp', title: 'PHÂN KHU NHẬT BẢN', description: 'Thiết kế tối giản, gần gũi thiên nhiên.' },
-    { id: 'mocano', title: 'PHÂN KHU MOCANO', description: 'Khu vực biển, phục vụ nghỉ dưỡng và giải trí.' },
+    { id: 'eu', title: 'PHÂN KHU CHÂU ÂU', description: 'Khu vực Châu Âu được thiết kế theo phong cách sang trọng, tinh tế, tái hiện kiến trúc cổ điển phương Tây.' },
+    { id: 'asia', title: 'PHÂN KHU CHÂU Á', description: 'Khu Châu Á mang hơi hướng giao thoa Á Đông, đề cao sự ấm cúng và tiện ích:' },
+    { id: 'jp', title: 'PHÂN KHU NHẬT BẢN', description: 'Lấy cảm hứng từ tinh thần thiền định và sự hài hòa trong văn hóa Nhật Bản, phân khu này được quy hoạch:' },
+    { id: 'mocano', title: 'PHÂN KHU MOCANO', description: 'Monaco được định hướng là “trái tim nghỉ dưỡng xa hoa” của toàn dự án, gắn liền với phong cách Riviera – Monaco nổi tiếng:' },
   ]
 
-const products: Product[] = [
-    {
-      bullets: "Khoảng 2.668 căn liền kề với diện tích phổ biến từ 62 – 65m².",
-    },
-    {
-      bullets: "Khoảng 400 căn shophouse diện tích từ 90m², nằm trên các trục đường thương mại sầm uất.",
-    },
-    {
-      bullets: "Gần 850 căn biệt thự song lập với lối thiết kế cân đối.",
-    },
-    {
-      bullets: "Nơi có Suối Lương, Trung tâm Chăm sóc sức khoẻ khoáng nóng, Khu Thương mại tự do, dãy các toà cao tầng, NOXH.",
-    },
-  ];
+const subdivisionContent: Record<string, string[]> = {
+  eu: [
+    "Khoảng 2.668 căn liền kề với diện tích phổ biến từ 62 – 65m².",
+    "Khoảng 400 căn shophouse diện tích từ 90m², nằm trên các trục đường thương mại sầm uất.",
+    "Gần 850 căn biệt thự song lập với lối thiết kế cân đối.",
+    "Nơi có Suối Lương, Trung tâm Chăm sóc sức khoẻ khoáng nóng, Khu Thương mại tự do, dãy các toà cao tầng, NOXH.",
+  ],
+  asia: [
+    "Dự kiến có khoảng 705 căn biệt thự cao cấp được bố trí ven biển và trung tâm khu vực.",
+    "Nhà hàng 360 độ Panorama tầm view biển với không gian mở, tầm nhìn toàn cảnh đại dương, hứa hẹn trở thành điểm nhấn cho giới thượng lưu.",
+    "Ga tàu điện nội khu giúp kết nối thuận lợi giữa các phân khu.",
+  ],
+  jp: [
+    "Khoảng 1.400 căn liền kề với diện tích đa dạng từ 60 – 100m².",
+    "Gần 600 biệt thự song lập (150 – 200m²), phù hợp cho các gia đình mong muốn không gian rộng rãi.",
+    "Hơn 200 căn biệt thự đơn lập (200 – 400m²) mang tính cá nhân hóa cao, riêng tư tuyệt đối.",
+    "Nơi có khách sạn biểu tượng, hệ thống VinWonders, chuỗi tiện ích liên hoàn.",
+  ],
+  mocano: [
+    "205 sản phẩm biệt thự đơn lập phong cách Monaco đẳng cấp.",
+    "Phát triển khách sạn nghỉ dưỡng 5 sao, trung tâm giải trí cao cấp và casino (dự kiến).",
+    "Quyền sở hữu lên đến 50 năm.",
+    "Thừa hưởng toàn bộ hệ thống tiện ích đẳng cấp từ Vinpearl.",
+  ],
+}
 
   const items = propsItems ?? defaultItems
   const [activeIndex, setActiveIndex] = useState<number>(0)
@@ -65,6 +76,10 @@ const products: Product[] = [
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items.length, intervalMs])
 
+  // content for currently active subdivision
+  const activeId = items[activeIndex]?.id ?? items[0].id
+  const activeBullets = subdivisionContent[activeId] ?? []
+
   return (
     <section className="w-full">
         <div className="w-full relative bg-[url('/images/banner-subdivision.webp')] bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[624px] bg-size-[62.8%_100%]">
@@ -73,25 +88,23 @@ const products: Product[] = [
         <div className="max-w-[1152px] mx-auto relative h-full">
           <div className="absolute left-0 lg:w-[32.39%] w-full lg:px-[30px] lg:py-10 z-10 flex flex-col lg:gap-2.5 gap-[26px]">
             <div className="flex flex-col gap-2.5 lg:p-0 pt-[152px] px-[42.5px]">
-            <h3 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">PHÂN KHU CHÂU ÂU</h3>
+            <h3 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[activeIndex]?.title}</h3>
             <p className="text-base leading-6 font-montserrat text-black">
-              Khu vực Châu Âu được thiết kế theo phong cách sang trọng, tinh tế, tái hiện kiến trúc cổ điển phương Tây.
+              {/*
+                Optional description per subdivision; fall back to item description if provided
+              */}
+              {items[activeIndex]?.description ?? ''}
             </p>
-            {products.map((p, idx) => {
-              const bullets = Array.isArray(p.bullets) ? p.bullets : p.bullets ? [p.bullets] : []
-              return (
-                <article key={idx} className="flex flex-col gap-2.5">
-                  <ul className="flex flex-col gap-2.5">
-                    {bullets.map((b, i) => (
-                      <li key={i} className="flex items-start gap-2.5">
-                        <Image src="/images/logo-cropped.png" alt="Project product" width={22} height={22} className="object-cover" />
-                        <span className="text-base leading-6 text-black font-normal font-montserrat">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              )
-            })}
+            <article className="flex flex-col gap-2.5">
+              <ul className="flex flex-col gap-2.5">
+                {activeBullets.map((b, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <Image src="/images/logo-cropped.png" alt="Project product" width={22} height={22} className="object-cover" />
+                    <span className="text-base leading-6 text-black font-normal font-montserrat">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
             </div>
           </div>
           

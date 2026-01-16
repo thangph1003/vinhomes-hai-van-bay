@@ -1,6 +1,6 @@
-'use client'
+ 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Image from 'next/image'
@@ -33,10 +33,63 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
     '/images/iconLocation.svg',
   ]
 
+  const containerRef = useRef<HTMLDivElement | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+  useEffect(() => {
+    const root = containerRef.current
+    if (!isMobile || !root) {
+      // ensure desktop uses default active (no JS active)
+      requestAnimationFrame(() => setActiveIndex(0))
+      return
+    }
+
+    if (root.scrollLeft !== 0) root.scrollLeft = 0
+    requestAnimationFrame(() => setActiveIndex(0))
+
+    let rafId: number | null = null
+    const onScroll = () => {
+      if (!root) return
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        const rootRect = root.getBoundingClientRect()
+        const rootCenter = (rootRect.left + rootRect.right) / 2
+        let bestIdx = 0
+        let bestDist = Infinity
+        Array.from(root.children).forEach((c, i) => {
+          const el = c as HTMLElement
+          const r = el.getBoundingClientRect()
+          const center = (r.left + r.right) / 2
+          const dist = Math.abs(center - rootCenter)
+          if (dist < bestDist) {
+            bestDist = dist
+            bestIdx = i
+          }
+        })
+        setActiveIndex(bestIdx)
+      })
+    }
+
+    root.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+
+    return () => {
+      root.removeEventListener('scroll', onScroll)
+      if (rafId) cancelAnimationFrame(rafId)
+    }
+  }, [isMobile])
+
   return (
     <>
       {/* TOP: Map + Right text */}
-      <section id="vi-tri-du-an" className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top md:h-[742px] h-[239px]">
+      <section id="vi-tri-du-an" className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top md:h-[742px] h-[239px] z-[-1]">
         <div className="max-w-[1152px] mx-auto">
           <div className="md:w-[411px] flex flex-col md:justify-self-end absolute md:bottom-[135px] md:text-end z-1 bg-white p-5 md:bg-transparent md:p-0 mx-[22px] top-[207px]">
             <h3 className="md:text-[44px] text-[32px] md:leading-[57px] leading-[42px] text-[#162B75] font-bold font-crimson-text">VỊ TRÍ ĐỘC BẢN</h3>
@@ -47,16 +100,16 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </section>
 
       {/* MIDDLE: Cards */}
-      <div className="max-w-[1152px] mx-auto md:-mt-[107.5px] mt-[384px] overflow-hidden">
-      <div className="flex lg:grid lg:grid-cols-4 lg:gap-6 gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] lg:ml-0" style={{ WebkitOverflowScrolling: "touch" }}>
+      <div className="max-w-[1152px] mx-auto md:-mt-[107.5px] mt-[384px] overflow-hidden lg:px-[32.5px] xl:px-0">
+      <div ref={containerRef} className="flex lg:grid lg:grid-cols-4 lg:gap-6 gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] lg:ml-0 z-10" style={{ WebkitOverflowScrolling: "touch" }}>
           {cards.map((card, idx) => {
             const fromLeft = idx < 2
             const aos = fromLeft ? 'fade-right' : 'fade-left'
             return (
             <div
                 key={card.title}
-                data-aos={aos}
-                className="bg-[#162B75] hover:bg-[#DCA447] transition-all duration-300 text-white pt-[34px] pb-6 px-[29px] flex flex-col gap-[15px] from-1440 flex-none w-[77%] md:w-auto snap-start"
+                data-index={idx}
+                className={`${isMobile && activeIndex === idx ? 'bg-[#DCA447]' : 'bg-[#162B75] hover:bg-[#DCA447]'} transition-all duration-300 text-white pt-[34px] pb-6 px-[29px] flex flex-col gap-[15px] from-1440 flex-none w-[77%] md:w-auto snap-start`}
               >
                 <h4 className="text-[28px] leading-[36px] font-bold font-crimson-text text-center">{card.title}</h4>
                 <ul className="flex flex-col gap-2.5">
@@ -82,7 +135,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </div>
 
       {/* BOTTOM: Left text + Right image */}
-      <section id="tien-ich" className="max-w-[1152px] mx-auto lg::pt-[37px] lg:pb-[98px] px-[33px] lg:px-0 pt-[37px] pb-[32px] flex flex-col gap-[37px]">
+      <section className="max-w-[1152px] mx-auto lg:px-[32.5px] xl:px-0 lg::pt-[37px] lg:pb-[98px] px-[33px] pt-[37px] pb-[32px] flex flex-col gap-[37px]">
         <div className="flex lg:flex-row flex-col gap-6">
             <div className="lg:w-1/2 w-full flex flex-col gap-[11px]">
                 <h2 className="md:text-[28px] text-[26px] md:leading-[36px] leading-[34px] font-bold font-crimson-text text-[#DCA447]">ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</h2>

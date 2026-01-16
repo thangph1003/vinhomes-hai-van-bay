@@ -44,7 +44,7 @@ export default function ProjectProducts() {
   const prev = () => setIdx((i) => (i - 1 + products.length) % products.length)
   const next = () => setIdx((i) => (i + 1) % products.length)
   return (
-    <section className="bg-[#F6E9D5] md:py-[50px] px-[31.5px] py-[30px]">
+    <section id="san-pham-chinh" className="bg-[#F6E9D5] md:py-[50px] px-[31.5px] py-[30px]">
       <div className="max-w-[1152px] mx-auto flex flex-col md:gap-10 gap-5">
         <div className="flex flex-col items-center text-center md:gap-[25px] gap-[15px]">
           <div className="flex flex-col gap-[5px] justify-center items-center"><Image src="/images/logo-cropped.png" alt="logo" width={62} height={57} className="md:w-[62px] md:h-[57px] w-[33px] h-[30px] object-contain" />
@@ -57,7 +57,7 @@ export default function ProjectProducts() {
         </div>
 
         {/* Mobile carousel inline (prev / next) */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="relative">
             {(() => {
               const p = products[idx]
@@ -67,7 +67,7 @@ export default function ProjectProducts() {
                     <div className="w-full md:h-[250px] h-[223px] overflow-hidden">
                       <Image src={p.image} alt={p.title} width={800} height={250} className="w-full h-full object-cover" />
                     </div>
-                    <div className="p-5 flex flex-col gap-2.5 h-[324px]">
+                    <div className="p-5 flex flex-col gap-2.5 md:h-[200px] h-[324px]">
                       <h3 className="text-[22px] leading-[38px] font-bold font-crimson-text text-[#162B75]">{p.title}</h3>
                       <ul className="flex flex-col gap-2.5">
                         {p.bullets.map((b, i) => (
@@ -92,8 +92,8 @@ export default function ProjectProducts() {
         </div>
 
         {/* Desktop / tablet grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6">
-          {products.map((p) => (
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {products.map((p) => (  
             <article key={p.title} className="bg-white shadow-sm overflow-hidden">
               <div className="w-full md:h-[250px] h-[233px] overflow-hidden">
                 <Image src={p.image} alt={p.title} width={800} height={250} className="w-full h-full object-cover hover:scale-105 transition-all duration-300" />

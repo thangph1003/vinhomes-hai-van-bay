@@ -16,7 +16,7 @@ export default function ProjectAmenities() {
       ];
 
   return (
-    <section className="relative w-full bg-[#F6E9D5] overflow-hidden flex flex-col items-center">
+    <section id="tien-ich" className="relative w-full bg-[#F6E9D5] overflow-hidden flex flex-col items-center">
     <div className='flex flex-col max-w-[1153px] md:px-[32px] xl:px-0 pl-[33px] pr-[32px] md:mb-[59px] mb-[41px] items-center'>
       <div className="absolute top-0 text-center z-0 select-none pointer-events-none">
         <h2 className="md:text-[200px] text-[150px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal md:leading-[260px] leading-[195px]">
@@ -48,9 +48,9 @@ export default function ProjectAmenities() {
             sizes="100vw"
         />
 
-        <div className='md:my-[30px] my-[20px] w-full flex md:flex-row flex-col md:gap-[24px] gap-[10px]'>
-            <h2 className='md:w-[23.8%] md:h-auto w-auto h-[27.3%] font-crimson-text font-bold md:text-[28px] text-[26px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
-            <p className='md:w-[73.9%] md:h-auto w-auto h-[69%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
+        <div className='md:my-[30px] my-[20px] w-full flex lg:flex-row flex-col md:gap-[24px] gap-[10px]'>
+            <h2 className='lg:w-[23.8%] md:h-auto w-auto h-[27.3%] font-crimson-text font-bold md:text-[28px] text-[26px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
+            <p className='lg:w-[73.9%] md:h-auto w-auto h-[69%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
                 còn là không gian sống thượng lưu với hệ tiện ích nội khu được quy hoạch bài bản, đáp ứng trọn vẹn mọi nhu cầu từ an cư, nghỉ dưỡng đến giải trí 
                 - giáo dục - chăm sóc sức khỏe.</p>
         </div>

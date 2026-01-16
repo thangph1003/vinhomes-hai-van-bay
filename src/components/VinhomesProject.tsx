@@ -27,16 +27,16 @@ export default function VinhomesProject() {
                 Vinhomes Hải Vân Bay mang theo triết lý phát triển sống xanh, sống tinh tuyển và sống kết nối.
         </p>
       
-        <div  className='max-w-[1151px] md:mt-[30px] mt-[26px] px-[32px] xl:px-0 md:mb-[74px] mb-[37px] flex md:flex-row flex-col '>
-          <div className='flex flex-col md:w-[26.9%] w-auto md:h-auto h-[69.2%] md:px-[30px] md:py-[40px] p-[33px] bg-[#FFFFFF] gap-[10px]'>
-            <h4 className='font-crimson-text font-bold md:text-[28px] text-[24px] md:leading-[36px] leading-[31px] text-[#DCA447] tracking-normal'>LƯNG TỰA NÚI MẶT HƯỚNG BIỂN</h4>
+        <div  className='max-w-[1151px] lg:mt-[30px] mt-[26px] px-[32px] xl:px-0 lg:mb-[74px] mb-[37px] flex lg:flex-row flex-col '>
+          <div className='flex flex-col lg:w-[26.9%] w-auto lg:h-auto h-[69.2%] lg:px-[30px] lg:py-[40px] p-[33px] bg-[#FFFFFF] gap-[10px]'>
+            <h4 className='font-crimson-text font-bold lg:text-[28px] text-[24px] lg:leading-[36px] leading-[31px] text-[#DCA447] tracking-normal'>LƯNG TỰA NÚI MẶT HƯỚNG BIỂN</h4>
             <p className='font-montserrat font-normal text-[16px] leading-[24px] tracking-normal'> Dự án hội tụ trọn vẹn hệ giá trị sống toàn diện: tiện ích đỉnh cao, dịch vụ chuyên biệt, cộng đồng chọn lọc, và trên hết là một phong cách sống 
                   “gắn kết với thiên nhiên, đậm chất tinh hoa”. Với tầm nhìn hướng về phát triển bền vững và hội nhập quốc tế, dự án được kỳ vọng sẽ trở thành biểu tượng mới của miền Trung
                   - điểm đến của cư dân tinh hoa, nhà đầu tư và du khách thế giới.</p>
           </div>
 
-          <div className="md:w-[73.1%] w-auto md:h-auto h-[30.8%]">
-            <div className="w-full h-full overflow-hidden md:border-b-0 md:border-r-13 border-b-13 border-[#DCA447]">
+          <div className="lg:w-[73.1%] w-auto lg:h-auto h-[30.8%]">
+            <div className="w-full h-full overflow-hidden lg:border-b-0 lg:border-r-13 border-b-13 border-[#DCA447]">
               <Image src="/images/vinhomes-project.webp" alt="Vinhomes Project" width={1200} height={720} className="w-full h-full object-cover" />
             </div>
           </div>
