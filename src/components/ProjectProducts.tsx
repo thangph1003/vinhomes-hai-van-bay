@@ -67,7 +67,7 @@ export default function ProjectProducts() {
                     <div className="w-full md:h-[250px] h-[223px] overflow-hidden">
                       <Image src={p.image} alt={p.title} width={800} height={250} className="w-full h-full object-cover" />
                     </div>
-                    <div className="p-5 flex flex-col gap-2.5">
+                    <div className="p-5 flex flex-col gap-2.5 h-[324px]">
                       <h3 className="text-[22px] leading-[38px] font-bold font-crimson-text text-[#162B75]">{p.title}</h3>
                       <ul className="flex flex-col gap-2.5">
                         {p.bullets.map((b, i) => (
