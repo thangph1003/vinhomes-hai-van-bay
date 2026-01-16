@@ -38,7 +38,7 @@ export default function DownloadSection() {
 
     <section 
     id="tong-quan"
-      className="w-full md:px-4 pl-[33px] pr-[32px] mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
+      className="w-full xl:px-0 pl-[33px] pr-[32px] mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
     >
 
       <div className="max-w-[1152px] md:my-[65px] mt-[32.24px] mb-[27.59px] flex flex-col items-center md:gap-[40px] gap-[20px]">
