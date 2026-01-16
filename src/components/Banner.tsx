@@ -13,7 +13,7 @@ export default function Banner({
 }: BannerProps) {
   return (
     <section
-      className={`relative w-full overflow-hidden h-[640px] ${className}`}
+      className={`relative w-full overflow-hidden lg:h-[640px] h-[393px] ${className}`}
       aria-label="Hero banner"
     >
       {/* Background image */}
@@ -27,12 +27,12 @@ export default function Banner({
         />
       </div>
 
-      <div className="absolute flex justify-center z-20 bottom-0 w-full pt-[102px] pb-[26px] bg-[linear-gradient(180deg,rgba(22,43,117,0)_0%,#162B75_100%)] bg-blend-multiply">
+      <div className="absolute flex justify-center z-20 bottom-0 w-full lg:pt-[102px] lg:pb-[26px] pt-[45px] pb-[25px] lg:px-0 px-[5px] bg-[linear-gradient(180deg,rgba(22,43,117,0)_0%,#162B75_100%)] bg-blend-multiply">
         <div className="text-center">
-          <h1 className="text-[44px] leading-[57px] font-crimson-text font-bold text-white">
+          <h1 className="lg:text-[44px] lg:leading-[57px] text-[32px] leading-[42px] font-crimson-text font-bold text-white">
             {title}
           </h1>
-          <p className="text-white text-[22px] leading-[32px] font-normal">{subtitle}</p>
+          <p className="text-white sm:text-[22px] sm:leading-[32px] text-base leading-5 font-normal">{subtitle}</p>
         </div>
       </div>
     </section>
