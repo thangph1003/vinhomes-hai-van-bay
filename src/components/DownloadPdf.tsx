@@ -38,25 +38,25 @@ export default function DownloadSection() {
 
     <section 
     id="tong-quan"
-      className="w-full h-[450px]  mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
+      className="w-full pl-[33px] pr-[32px] mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
     >
 
-      <div className=" max-w-[1152px] xl:px-0 lg:px-4 md:px-4 flex flex-col items-center gap-[40px]">
+      <div className="max-w-[1152px] sm:my-[65px] mt-[32.24px] mb-[27.59px] xl:px-0 lg:px-4 md:px-4 flex flex-col items-center sm:gap-[40px] gap-[20px]">
         
 
-        <h2 className={`font-crimson-text px-[172px] text-[22px] font-semibold leading-[29px] text-center text-[#162B75]`}>
+        <h2 className={`font-crimson-text sm:px-[172px] px-0 sm:text-[22px] text-[21px] font-semibold sm:leading-[29px] leading-[27px] text-center text-[#162B75]`}>
           Vinhomes Hải Vân Bay là một trong những dự án bất động sản nghỉ dưỡng nổi bật nhất
           tại Đà Nẵng, được phát triển bởi Tập đoàn Vingroup - thương hiệu hàng đầu trong lĩnh
           vực bất động sản Việt nam
         </h2>
 
 
-        <div className="w-full bg-white px-[39px] py-[30px] flex items-center justify-between">
+        <div className="w-full bg-white sm:px-[39px] px-[33px] py-[30px] flex sm:flex-row flex-col sm:items-center ">
             
       
-        <div className="flex items-center max-w-[1072px] gap-[15px]">
+        <div className="flex sm:flex-row flex-col items-start sm:items-center max-w-[1072px] sm:gap-[15px]">
               {documents.map((doc, index) => (
-                <a href={`/pdfFiles/${doc.src}`} download={doc.src} key={index} className="flex items-center gap-[5px] pr-[14px] border-r-2 border-[#162B75] last:border-none min-w-0">
+                <a href={`/pdfFiles/${doc.src}`} download={doc.src} key={index} className="flex items-center gap-[5px] sm:pr-[15px] w-full sm:w-auto sm:pb-0 pb-[10px] border-b sm:border-b-0 sm:border-r-2 border-[#162B75] last:border-none min-w-0">
                    <div className="flex items-center justify-center w-[40px] h-[40px] ">
         <div           className=" w-[30px] h-[40px]"> 
              <Image    src="/images/pdf-icon.svg"
@@ -77,13 +77,13 @@ export default function DownloadSection() {
             </div>
 
      
-            <button onClick={handleDownloadZip} className="h-[46px] w-[192px] bg-[#162B75] flex items-center justify-center hover:bg-[#DCA447] transition-colors">
+            <button onClick={handleDownloadZip} className="min-h-[46px] bg-[#162B75] flex sm:grow items-center justify-center hover:bg-[#DCA447] transition-colors">
              <div className=' max-w-[106px] text-[16px] leading-[24px] font-montserrat text-white font-normal ' > Tải bộ tài liệu</div>
             </button>
         </div>
 
       
-        <p className={`font-montserrat px-[172px] text-[16px] leading-[24px] text-center font-normal text-black`}>
+        <p className={`font-montserrat sm:px-[172px] px-0 text-[16px] leading-[24px] text-center font-normal text-black`}>
           Vinhomes sẽ không ngừng nỗ lực để kiến tạo nên những Khu đô thị đáng sống và đẳng cấp bậc
           nhất Việt Nam với khát khao mang đến 1 cuộc sống tốt đẹp hơn cho tất cả mọi người.    
         </p>
