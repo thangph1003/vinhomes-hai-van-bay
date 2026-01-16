@@ -63,7 +63,7 @@ export default function ProjectAmenities() {
                     className="group flex flex-col bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
                     >
 
-                    <div className="relative w-full aspect-270/180 overflow-hidden">
+                  <div className="relative w-full h-[180px] overflow-hidden">
                         <Image
                         src={item.src}
                         alt={item.title}
