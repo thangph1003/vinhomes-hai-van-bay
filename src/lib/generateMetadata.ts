@@ -22,9 +22,9 @@ export function generateMetadata(): Metadata {
       address: false,
       telephone: false,
     },
-    metadataBase: new URL('https://vinhomes-hai-van-bay.vercel.app'),
+    metadataBase: new URL(`${SITE_URL}`),
     alternates: {
-      canonical: '/',
+      canonical: `${SITE_URL}`,
     },
     openGraph: {
       title: "Vinhomes Hải Vân Bay - Căn hộ cao cấp ven biển Đà Nẵng",
