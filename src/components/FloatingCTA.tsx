@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FloatingCTA() {
   const phone = "0935917037";
   return (
-    <div className="fixed right-[68.5px] bottom-[45px] z-50 flex flex-col items-end gap-4">
+    <div className="fixed lg:right-[68.5px] right-1 lg:bottom-[45px] bottom-4 z-50 flex flex-col items-end gap-4">
       <Link
         href={`https://zalo.me/${phone}`}
         target="_blank"

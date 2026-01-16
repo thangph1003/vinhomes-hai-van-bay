@@ -32,8 +32,8 @@ export default function PopupForm({
         aria-hidden
       />
 
-      <div className="relative z-10">
-        <div className="flex flex-col gap-5 w-[461px] p-10 relative z-10 bg-[#162B75]">
+      <div className="relative z-10 mx-[32.5px] md:mx-auto">
+        <div className="flex flex-col gap-5 md:w-[461px] w-full md:p-10 p-5 relative z-10 bg-[#162B75]">
           <div className="flex flex-col gap-2.5 text-center">
             <h3 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">{title}</h3>
             <p className="text-sm leading-6 text-white font-normal font-montserrat">{subtitle}</p>
@@ -44,7 +44,7 @@ export default function PopupForm({
           onClick={() => setOpen(false)}
           aria-label="Close popup"
         >
-         <Image src="/images/iconClose.svg" alt="Close" width={24} height={24} />
+         <Image src="/images/iconClose.svg" alt="Close" width={24} height={24} className='w-5 h-5 md:w-6 md:h-6'/>
         </button>
         </div>
       </div>

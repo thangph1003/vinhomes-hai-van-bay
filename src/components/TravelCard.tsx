@@ -48,7 +48,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
 
       {/* MIDDLE: Cards */}
       <div className="max-w-[1152px] mx-auto md:-mt-[107.5px] mt-[384px] overflow-hidden">
-      <div className="flex md:grid md:gap-6 gap-4 overflow-x-auto md:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] md:ml-0" style={{ WebkitOverflowScrolling: "touch" }}>
+      <div className="flex lg:grid lg:grid-cols-4 lg:gap-6 gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] lg:ml-0" style={{ WebkitOverflowScrolling: "touch" }}>
           {cards.map((card, idx) => {
             const fromLeft = idx < 2
             const aos = fromLeft ? 'fade-right' : 'fade-left'
@@ -82,28 +82,28 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </div>
 
       {/* BOTTOM: Left text + Right image */}
-      <section id="tien-ich" className="max-w-[1152px] mx-auto md:pt-[37px] md:pb-[98px] px-[33px] md:px-0 pt-[37px] pb-[32px] flex flex-col gap-[37px]">
-        <div className="flex md:flex-row flex-col gap-6">
-            <div className="md:w-1/2 w-full flex flex-col gap-[11px]">
+      <section id="tien-ich" className="max-w-[1152px] mx-auto lg::pt-[37px] lg:pb-[98px] px-[33px] lg:px-0 pt-[37px] pb-[32px] flex flex-col gap-[37px]">
+        <div className="flex lg:flex-row flex-col gap-6">
+            <div className="lg:w-1/2 w-full flex flex-col gap-[11px]">
                 <h2 className="md:text-[28px] text-[26px] md:leading-[36px] leading-[34px] font-bold font-crimson-text text-[#DCA447]">ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</h2>
                 <p className="text-base leading-6 font-normal font-montserrat text-black">Vinhomes Hải Vân Bay nằm gần cảng biển quốc tế Liên Chiểu, khu thượng mại tự do và khu công nghệ cao Hoà Khành, tạo điều kiện cho việc phát triển thương mại, dịch vụ và du lịch trong tương lai.</p>
             </div>
-            <div className="md:w-1/2 w-full flex flex-col gap-[3px]">
+            <div className="lg:w-1/2 w-full flex flex-col gap-[3px]">
                 <h2 className="md:text-[28px] text-[26px] md:leading-[36px] leading-[32px] font-bold font-crimson-text text-[#DCA447]">LIÊN KẾT VÙNG DU LỊCH ĐẲNG CẤP</h2>
                 <p className="text-base leading-6 font-normal font-montserrat text-black">Nhờ vị trí chiến lược giữa Huế – Đà Nẵng – Hội An, Vinhomes Làng Vân trở thành trung tâm kết nối du lịch miền Trung. Nhờ đó, Vinhomes Hải Vân Bay không chỉ là nơi an cư mà còn là điểm đến nghỉ dưỡng quốc tế, góp phần nâng tầm vị thế của thành phố Đà Nẵng trên bản đồ du lịch châu Á.</p>
             </div>
         </div>
-        <div className="flex md:flex-row flex-col-reverse md:border-b-0 border-b-[13px] border-[#DCA447]">
-          <div className="md:w-[26.9%] w-full bg-[#f3e9d8] px-[30px] py-10 flex flex-col gap-2.5">
+        <div className="flex lg:flex-row flex-col-reverse lg:border-b-0 border-b-[13px] border-[#DCA447]">
+          <div className="lg:w-[26.9%] w-full bg-[#f3e9d8] px-[30px] py-10 flex flex-col gap-2.5">
             <h4 className="text-[28px] leading-[38px] font-bold font-crimson-text text-[#162B75]">VỊ TRÍ PHONG THỦY ĐẮC ĐỊA</h4>
             <div className="flex flex-col gap-6">
             <p className="text-base leading-6 font-normal font-montserrat text-black">Tọa lạc dưới chân đèo Hải Vân – ranh giới tự nhiên giữa Đà Nẵng và Thừa Thiên Huế, Vinhomes Hải Vân Bay sở hữu thế đất phong thủy hiếm có: lưng tựa núi, mặt hướng biển, được xem là thế đất cát địa bậc nhất theo quan niệm Á Đông.</p>
             <p className="text-base leading-6 font-normal font-montserrat text-black">Dãy Hải Vân làm bình phong tự nhiên phía sau, vịnh Nam Chơn mở rộng phía trước, kiến tạo một tổng thể hài hòa âm dương – ngũ hành, nơi hội tụ sinh khí, tài lộc và giá trị sống trường tồn.</p>
             </div>
           </div>
-          <div className="md:w-[73.1%] w-full">
-            <div className="w-full h-full overflow-hidden md:border-r-[13px] border-[#DCA447]">
-              <Image src="/images/banner-location.webp" alt="Coastal villa" width={1200} height={720} className="w-full md:h-full h-[225px] object-cover" />
+          <div className="lg:w-[73.1%] w-full">
+            <div className="w-full h-full overflow-hidden lg:border-r-[13px] border-[#DCA447]">
+              <Image src="/images/banner-location.webp" alt="Coastal villa" width={1200} height={720} className="w-full lg:h-full h-[225px] object-cover" />
             </div>
           </div>
         </div>
