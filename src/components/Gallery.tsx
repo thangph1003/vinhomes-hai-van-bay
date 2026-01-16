@@ -38,7 +38,7 @@ export default function Gallery({
             ))}
           </div>
 
-          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-[19px]">
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-[19px] md:px-[32.5px] xl:px-0">
             {images.map((src, i) => (
               <div key={i} className="rounded-[7px] overflow-hidden shadow-[2px_4px_4px_0px_rgba(0,0,0,0.25)]">
                 <div className="relative w-full h-[260px]">

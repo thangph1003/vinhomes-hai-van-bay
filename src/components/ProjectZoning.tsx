@@ -24,7 +24,7 @@ export default function ProjectZoning({
         <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
       </div>
     </section>
-    <section id="san-pham-chinh" className="relative">
+    <section className="relative">
       <div className="w-full">
         <Image
           src="/images/project-subdivision.webp"

@@ -37,14 +37,13 @@ export default function DownloadSection() {
   return (
 
     <section 
-    id="tong-quan"
       className="w-full xl:px-0 pl-[33px] pr-[32px] mx-auto flex flex-col justify-center items-center bg-[#F5F1E6]"
     >
 
       <div className="max-w-[1152px] md:my-[65px] mt-[32.24px] mb-[27.59px] flex flex-col items-center md:gap-[40px] gap-[20px]">
         
 
-        <h2 className={`font-crimson-text md:px-[172px] px-0 md:text-[22px] text-[21px] font-semibold md:leading-[29px] leading-[27px] text-center text-[#162B75]`}>
+        <h2 className={`font-crimson-text lg:px-[172px] md:px-20 px-0 md:text-[22px] text-[21px] font-semibold md:leading-[29px] leading-[27px] text-center text-[#162B75]`}>
           Vinhomes Hải Vân Bay là một trong những dự án bất động sản nghỉ dưỡng nổi bật nhất
           tại Đà Nẵng, được phát triển bởi Tập đoàn Vingroup - thương hiệu hàng đầu trong lĩnh
           vực bất động sản Việt nam
@@ -83,7 +82,7 @@ export default function DownloadSection() {
         </div>
 
       
-        <p className={`font-montserrat md:px-[172px] px-0 text-[16px] leading-[24px] text-center font-normal text-black`}>
+        <p className={`font-montserrat lg:px-[172px] md:px-20 px-0 text-[16px] leading-[24px] text-center font-normal text-black`}>
           Vinhomes sẽ không ngừng nỗ lực để kiến tạo nên những Khu đô thị đáng sống và đẳng cấp bậc
           nhất Việt Nam với khát khao mang đến 1 cuộc sống tốt đẹp hơn cho tất cả mọi người.    
         </p>
