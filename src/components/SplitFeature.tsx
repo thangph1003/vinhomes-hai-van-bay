@@ -67,7 +67,7 @@ const products: Product[] = [
 
   return (
     <section className="w-full">
-        <div className="w-full relative bg-[url('/images/banner-subdivision.webp')] bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[590px] bg-size-[62.8%_100%]">
+        <div className="w-full relative bg-[url('/images/banner-subdivision.webp')] bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[624px] bg-size-[62.8%_100%]">
         <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#F5F1E6] z-0" />
 
         <div className="max-w-[1152px] mx-auto relative h-full">
