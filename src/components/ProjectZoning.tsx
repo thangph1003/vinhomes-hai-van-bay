@@ -18,7 +18,7 @@ export default function ProjectZoning({
       <div className="absolute inset-0 -z-10">
         <Image src={imageSrc} alt={title} fill className="object-cover" priority={false} />
       </div>
-      <div className="flex flex-col gap-5 max-w-[461px] md:p-10 p-5 relative z-10 bg-[#162B75] md:my-[125px] my-12 mx-[32.5px] md:mx-0">
+      <div className="flex flex-col gap-5 md:max-w-[461px] max-w-full md:p-10 p-5 relative z-10 bg-[#162B75] md:my-[125px] my-12 mx-[32.5px] md:mx-auto">
        <div className="flex flex-col gap-2.5 text-center"> <h3 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">{title}</h3>
        <p className="text-sm leading-6 text-white font-normal font-montserrat">{subtitle}</p></div>
         <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
