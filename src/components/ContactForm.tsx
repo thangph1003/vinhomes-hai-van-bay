@@ -24,6 +24,26 @@ export default function ContactForm({
   const [message, setMessage] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
+  const validatePhoneNumber = (phone: string): boolean => {
+    const cleanedPhone = phone.replace(/\D/g, '')
+
+    if (cleanedPhone.length !== 10 && cleanedPhone.length !== 11) {
+      return false
+    }
+
+    if (cleanedPhone.length === 10) {
+      const validPrefixes10 = ['03', '05', '07', '08', '09']
+      const prefix = cleanedPhone.substring(0, 2)
+      return validPrefixes10.includes(prefix)
+    }
+
+    if (cleanedPhone.length === 11) {
+      return cleanedPhone.startsWith('01')
+    }
+
+    return false
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setMessage(null)
@@ -31,6 +51,16 @@ export default function ContactForm({
 
     if (!name || !email) {
       setError('Vui lòng nhập tên và email.')
+      return
+    }
+
+    if (!phone) {
+      setError('Vui lòng nhập số điện thoại.')
+      return
+    }
+
+    if (!validatePhoneNumber(phone)) {
+      setError('Số điện thoại không hợp lệ. Vui lòng nhập số điện thoại Việt Nam hợp lệ.')
       return
     }
 
@@ -81,7 +111,9 @@ export default function ContactForm({
         <input
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-         className="bg-white w-full h-11 px-4 py-3 placeholder:text-[#7E7E7E] placeholder:text-sm placeholder:leading-5 placeholder:font-montserrat"
+          type="tel"
+          required
+          className="bg-white w-full h-11 px-4 py-3 placeholder:text-[#7E7E7E] placeholder:text-sm placeholder:leading-5 placeholder:font-montserrat"
           placeholder="Số điện thoại"
         />
 
