@@ -19,18 +19,18 @@ export default function ProjectAmenities() {
     <section id="tien-ich" className="relative w-full bg-[#F6E9D5] overflow-hidden flex flex-col items-center">
     <div className='flex flex-col max-w-[1153px] md:px-[32px] xl:px-0 pl-[33px] pr-[32px] md:mb-[59px] mb-[41px] items-center'>
       <div className="absolute top-0 text-center z-0 select-none pointer-events-none">
-        <h2 className="md:text-[200px] text-[150px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal md:leading-[260px] leading-[195px]">
+        <span className="md:text-[200px] text-[150px] font-crimson-text font-normal text-[#F0E0C680] tracking-normal md:leading-[260px] leading-[195px]">
           VINHOMES
-        </h2>
+        </span>
       </div>
 
       <div className=" z-10 md:pt-[73px] pt-[48px] flex flex-col justify-center items-center">
         <div className="flex flex-col gap-[5px] max-w-[653px] items-center">
          <Image src="/images/logo-cropped.png" alt='logo' width="62" height="57" className='md:w-[62px] md:h-[57px] w-[33px] h-[30px]'></Image>
 
-          <h3 className="font-crimson-text md:px-0 px-[20px] w-full text-[#162B75] md:text-[44px] text-[32px] font-bold md:leading-[57px] leading-[42px] tracking-normal text-center">
+          <h2 className="font-crimson-text md:px-0 px-[20px] w-full text-[#162B75] md:text-[44px] text-[32px] font-bold md:leading-[57px] leading-[42px] tracking-normal text-center">
                 MẶT BẰNG TIỆN ÍCH DỰ ÁN
-          </h3>
+          </h2>
         </div>
       </div>
 

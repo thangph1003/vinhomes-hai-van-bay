@@ -67,9 +67,9 @@ export default function DownloadSection() {
                    </div>
                    <div className="flex flex-col min-w-0 gap-[2px] justify-center font-montserrat">
                       <span className="text-[14px] leading-[20px] not-italic text-[#000000] font-normal tracking-normal">{doc.sub}</span>
-                      <div className=" text-[#162B75] font-bold text-[14px] leading-[20px]">
+                      <h3 className=" text-[#162B75] font-bold text-[14px] leading-[20px]">
                         {doc.title}
-                      </div>
+                      </h3>
                    </div>
                 </a>
               ))}
