@@ -48,8 +48,8 @@ export async function POST(req: Request) {
       <table width="620" cellspacing="0" cellpadding="0" style="background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e5e7eb">
         <tbody>
           <tr>
-            <td style="background:#f5f8fa;padding:16px 24px">
-              <a href="https://vinhomes-dansolutions.vercel.app/" style="flex justify-center">
+            <td style="background:#f5f8fa;padding:16px 24px; display: flex; justify-content: center;">
+              <a href="https://vinhomes-dansolutions.vercel.app/">
                 <img src="https://vinhomes-dansolutions.vercel.app/images/logo.png" alt="Logo" style="height:42px;display:block" />
               </a>
             </td>
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
           <tr>
             <td style="padding:22px 24px 10px 24px">
               <h2 style="margin:0;font-size:18px;color:#162B75">
-                Bạn có một đăng ký tư vấn mới từ website
+                Bạn có một đăng ký mới từ website
               </h2>
             </td>
           </tr>
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
                 </tbody>
               </table>
               <p style="margin:16px 0 0 0;color:#6b7280;font-size:14px">
-                Tin nhắn được gửi từ form <strong>Đăng ký tư vấn</strong> trên website.
+                Tin nhắn được gửi từ form <strong>Đăng ký</strong> trên website.
               </p>
             </td>
           </tr>
