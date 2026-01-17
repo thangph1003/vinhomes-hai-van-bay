@@ -43,7 +43,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg top-0 z-50">
       <div className="max-w-[1149px] mx-auto flex flex-col gap-[30px]">
-        <div className="flex justify-between items-center lg:pt-[11px] lg:pb-3 py-2.5 px-[33px]">
+        <div className="flex justify-between items-center lg:pt-[11px] lg:pb-3 py-2.5 px-5">
           {/* Logo */}
           <Link href="/" className="lg:w-[97px] lg:h-[43px] w-[78px] h-[35px]">
             <Image src="/images/logo.png" alt="Vinhomes Hải Vân Bay" width={100} height={100} className="w-full h-full object-cover" />
@@ -83,7 +83,7 @@ export default function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden h-5">
+          <div className="lg:hidden flex h-[30px] w-[30px]">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-[#162B75] hover:text-blue-600 lg:p-2 p-0"
