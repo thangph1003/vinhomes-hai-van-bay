@@ -19,7 +19,7 @@ export default function Banner({
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/banner.webp"
+          src="/images/banner-resize.webp"
           alt="Vinhomes Hải Vân Bay banner"
           fill
           className="object-cover"
