@@ -88,7 +88,7 @@ const subdivisionContent: Record<string, string[]> = {
         <div className="max-w-[1152px] mx-auto relative h-full">
           <div className="absolute left-0 lg:w-[32.39%] w-full lg:px-[30px] lg:py-10 z-10 flex flex-col lg:gap-2.5 gap-[26px]">
             <div className="flex flex-col gap-2.5 lg:p-0 pt-[152px] px-[42.5px]">
-            <h3 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[activeIndex]?.title}</h3>
+            <h2 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[activeIndex]?.title}</h2>
             <p className="text-base leading-6 font-montserrat text-black">
               {/*
                 Optional description per subdivision; fall back to item description if provided

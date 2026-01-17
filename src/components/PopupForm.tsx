@@ -35,7 +35,7 @@ export default function PopupForm({
       <div className="relative z-10 mx-[32.5px] md:mx-auto">
         <div className="flex flex-col gap-5 md:w-[461px] w-full md:p-10 p-5 relative z-10 bg-[#162B75]">
           <div className="flex flex-col gap-2.5 text-center">
-            <h3 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">{title}</h3>
+            <h2 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">{title}</h2>
             <p className="text-sm leading-6 text-white font-normal font-montserrat">{subtitle}</p>
           </div>
           <ContactForm gapClass="gap-[15px]" ptClass="pt-[5px]" formClass="w-full flex flex-col gap-4" />
