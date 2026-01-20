@@ -57,6 +57,7 @@ const subdivisionContent: Record<string, string[]> = {
 
   const items = propsItems ?? defaultItems
   const [activeIndex, setActiveIndex] = useState<number>(0)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const intervalRef = useRef<number | null>(null)
 
   const startInterval = () => {
@@ -76,8 +77,8 @@ const subdivisionContent: Record<string, string[]> = {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items.length, intervalMs])
 
-  // content for currently active subdivision
-  const activeId = items[activeIndex]?.id ?? items[0].id
+  const displayIndex = hoveredIndex !== null ? hoveredIndex : activeIndex
+  const activeId = items[displayIndex]?.id ?? items[0].id
   const activeBullets = subdivisionContent[activeId] ?? []
 
   return (
@@ -88,12 +89,12 @@ const subdivisionContent: Record<string, string[]> = {
         <div className="max-w-[1152px] mx-auto relative h-full">
           <div className="absolute left-0 lg:w-[32.39%] w-full lg:px-[30px] lg:py-10 z-10 flex flex-col lg:gap-2.5 gap-[26px]">
             <div className="flex flex-col gap-2.5 lg:p-0 pt-[152px] px-[42.5px]">
-            <h2 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[activeIndex]?.title}</h2>
+            <h2 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[displayIndex]?.title}</h2>
             <p className="text-base leading-6 font-montserrat text-black">
               {/*
                 Optional description per subdivision; fall back to item description if provided
               */}
-              {items[activeIndex]?.description ?? ''}
+              {items[displayIndex]?.description ?? ''}
             </p>
             <article className="flex flex-col gap-2.5">
               <ul className="flex flex-col gap-2.5">
@@ -117,16 +118,18 @@ const subdivisionContent: Record<string, string[]> = {
                   <button
                     key={item.id}
                     type="button"
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                     onClick={() => {
                       setActiveIndex(idx)
                       startInterval()
                     }}
                     className={`shrink-0 hover:cursor-pointer rounded-full flex flex-col items-center justify-center transition-all duration-300 lg:w-[240px] lg:h-[240px] w-[102px] h-[102px] ${idx !== 0 ? 'lg:-ml-[55px] -ml-4' : ''} ${
-                      active ? 'bg-[#FFFFFF66]' : 'bg-none'
+                      active || hoveredIndex === idx ? 'bg-[#FFFFFF66]' : 'bg-none hover:bg-[#FFFFFF66] transition-all duration-300'
                     }`}
                     aria-pressed={active}
                   >
-                    <div className={`lg:w-[130px] lg:h-[130px] w-[70px] h-[70px] rounded-full flex items-center justify-center ${active ? 'bg-[#DCA447]' : 'bg-[#162B75]'}`}>
+                    <div className={`lg:w-[130px] lg:h-[130px] w-[70px] h-[70px] rounded-full flex items-center justify-center ${active || hoveredIndex === idx ? 'bg-[#DCA447]' : 'bg-[#162B75] hover:bg-[#DCA447] transition-all duration-300'}`}>
                       <span className="text-white lg:text-sm text-[10px] leading-[13px] font-bold text-center lg:px-6 lg:py-[34px] px-[9.5px] py-3">
                         {item.title}
                       </span>
