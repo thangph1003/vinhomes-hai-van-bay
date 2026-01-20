@@ -1,9 +1,55 @@
 import { NextResponse } from 'next/server'
+import { google } from 'googleapis'
 
 type RequestBody = {
   name?: string
   email?: string
   phone?: string
+}
+
+async function appendToGoogleSheets(name: string, email: string, phone: string) {
+  try {
+    const clientEmail = process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL
+    const privateKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY?.replace(/\\n/g, '\n')
+    const spreadsheetId = process.env.GOOGLE_SHEET_ID
+
+    if (!clientEmail || !privateKey || !spreadsheetId) {
+      return
+    }
+
+    const jwtClient = new google.auth.JWT({
+      email: clientEmail,
+      key: privateKey,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    })
+
+    const sheets = google.sheets({ version: 'v4', auth: jwtClient })
+
+    const values = [[
+      new Date().toLocaleString('vi-VN'),
+      name || '-',
+      email,
+      phone || '-'
+    ]]
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range: 'A:D',
+      valueInputOption: 'RAW',
+      requestBody: {
+        values,
+      },
+    })
+
+  } catch (error: unknown) {
+    const err = error as { message?: string; code?: number; status?: number; errors?: unknown }
+    console.error('Error appending to Google Sheets:', {
+      message: err.message,
+      code: err.code,
+      status: err.status,
+      details: err.errors
+    })
+  }
 }
 
 export async function POST(req: Request) {
@@ -104,6 +150,8 @@ export async function POST(req: Request) {
       text,
       html,
     })
+
+    appendToGoogleSheets(name || '', email, phone || '')
 
     return NextResponse.json({ ok: true })
   } catch (err: unknown) {
