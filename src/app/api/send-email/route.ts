@@ -49,8 +49,8 @@ export async function POST(req: Request) {
         <tbody>
           <tr>
             <td style="background:#f5f8fa;padding:16px 24px; display: flex; justify-content: center;">
-              <a href="https://vinhomes-dansolutions.vercel.app/">
-                <img src="https://vinhomes-dansolutions.vercel.app/images/logo.png" alt="Logo" style="height:42px;display:block" />
+              <a href="https://duanvinhomeslangvan.com">
+                <img src="https://duanvinhomeslangvan.com/images/logo.png" alt="Logo" style="height:42px;display:block" />
               </a>
             </td>
           </tr>
