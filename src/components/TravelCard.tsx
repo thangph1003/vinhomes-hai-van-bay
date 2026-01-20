@@ -109,8 +109,8 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
             <div
                 key={card.title}
                 data-index={idx}
-                data-aos={aos}
-                className={`${isMobile && activeIndex === idx ? 'bg-[#DCA447]' : 'bg-[#162B75] hover:bg-[#DCA447] cursor-pointer'} transition-all duration-300 text-white pt-[34px] pb-6 px-[29px] flex flex-col gap-[15px] from-1440 flex-none w-[77%] md:w-auto snap-start`}
+                {...(!isMobile && { 'data-aos': aos })}
+                className={`${isMobile && activeIndex === idx ? 'bg-[#DCA447]' : 'bg-[#162B75] hover:bg-[#DCA447]'} transition-all duration-300 text-white pt-[34px] pb-6 px-[29px] flex flex-col gap-[15px] from-1440 flex-none w-[77%] md:w-auto snap-start`}
               >
                 <h3 className="text-[28px] leading-[36px] font-bold font-crimson-text text-center">{card.title}</h3>
                 <ul className="flex flex-col gap-2.5">
