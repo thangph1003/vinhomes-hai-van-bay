@@ -2,15 +2,14 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
+import ContactForm from './ContactForm'
 
 type FeatureItem = {
   id: string
   title: string
-  description?: string
-  image?: string
 }
 
-type SplitFeatureProps = {
+type FormZoneProps = {
   items?: FeatureItem[]
   intervalMs?: number
 }
@@ -19,15 +18,15 @@ type Product = {
     bullets?: string | string[];
   };
 
-export default function SplitFeature({
+export default function FormZone({
   items: propsItems,
   intervalMs = 5000,
-}: SplitFeatureProps) {
+}: FormZoneProps) {
   const defaultItems: FeatureItem[] = [
-    { id: 'eu', title: 'PHÂN KHU CHÂU ÂU', description: 'Khu vực Châu Âu được thiết kế theo phong cách sang trọng, tinh tế, tái hiện kiến trúc cổ điển phương Tây.', image: '/images/banner-subdivision.webp' },
-    { id: 'asia', title: 'PHÂN KHU CHÂU Á', description: 'Khu Châu Á mang hơi hướng giao thoa Á Đông, đề cao sự ấm cúng và tiện ích:', image: '/images/subdivision-02.webp' },
-    { id: 'jp', title: 'PHÂN KHU NHẬT BẢN', description: 'Lấy cảm hứng từ tinh thần thiền định và sự hài hòa trong văn hóa Nhật Bản, phân khu này được quy hoạch:', image: '/images/subdivision-03.webp' },
-    { id: 'mocano', title: 'PHÂN KHU MOCANO', description: 'Monaco được định hướng là "trái tim nghỉ dưỡng xa hoa" của toàn dự án, gắn liền với phong cách Riviera – Monaco nổi tiếng:', image: '/images/subdivision-04.webp' },
+    { id: 'modern', title: 'MẪU BT HIỆN ĐẠI'},
+    { id: 'indochine', title: 'MẪU BT INDOCHINE' },
+    { id: 'classic', title: 'MẪU LK CỔ ĐIỂN'},
+    { id: 'neoclassical', title: 'MẪU LK TÂN CỔ ĐIỂN'},
   ]
 
 const subdivisionContent: Record<string, string[]> = {
@@ -80,39 +79,31 @@ const subdivisionContent: Record<string, string[]> = {
 
   const displayIndex = hoveredIndex !== null ? hoveredIndex : activeIndex
   const activeId = items[displayIndex]?.id ?? items[0].id
-  const activeBullets = subdivisionContent[activeId] ?? []
-  const activeImage = items[displayIndex]?.image ?? items[0].image
+
+  const zoneImages: Record<string, string> = {
+    modern: '/images/zone-1.webp',
+    indochine: '/images/zone-2.webp',
+    classic: '/images/zone-3.webp',
+    neoclassical: '/images/zone-4.webp',
+  }
+
+  const activeZoneImage = zoneImages[activeId] ?? '/images/zone-1.webp'
 
   return (
     <section className="w-full">
         <div
-          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[624px] bg-size-[62.8%_100%]"
-          style={{ backgroundImage: `url(${activeImage})` }}
+          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[520px] h-[624px] bg-size-[60.8%_100%]"
+          style={{ backgroundImage: `url(${activeZoneImage})` }}
         >
-        <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#F5F1E6] z-0" />
+        <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#162B75] z-0" />
 
         <div className="max-w-[1152px] mx-auto relative h-full">
-          <div className="absolute left-0 lg:w-[32.39%] w-full lg:px-[30px] lg:py-10 z-10 flex flex-col lg:gap-2.5 gap-[26px]">
-            <div className="flex flex-col gap-2.5 lg:p-0 pt-[152px] px-[42.5px]">
-            <h2 className="text-[28px] leading-[38px] font-crimson-text font-bold text-[#162B75]">{items[displayIndex]?.title}</h2>
-            <p className="text-base leading-6 font-montserrat text-black">
-              {/*
-                Optional description per subdivision; fall back to item description if provided
-              */}
-              {items[displayIndex]?.description ?? ''}
-            </p>
-            <article className="flex flex-col gap-2.5">
-              <ul className="flex flex-col gap-2.5">
-                {activeBullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Image src="/images/logo-cropped.png" alt="Project product" width={22} height={22} className="object-cover" />
-                    <span className="text-base leading-6 text-black font-normal font-montserrat">{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-            </div>
-          </div>
+        <div className="flex flex-col gap-5 relative z-10 lg:max-w-[329px] xl:px-0 lg:px-[31.5px] max-w-full lg:pt-[30px] md:px-[31.5px] pt-[150px] px-[52.5px]">
+       <div className="flex flex-col gap-2.5 text-center"> <h2 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">Đăng ký nhận thông tin
+       THIẾT KẾ ĐIỂN HÌNH CỦA DỰ ÁN</h2>
+       <p className="text-sm leading-6 text-white font-normal font-montserrat">Các tài liệu khách hàng nhận được gồm: Thiết kế và phương án ghép mẫu nhà mỡi nhất của dự án Vinhomes Hải Vân Bay</p></div>
+        <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
+      </div>
           
 
           <div className="absolute top-[30px] lg:bottom-[25px] lg:top-auto left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 z-20 pointer-events-auto">
@@ -129,13 +120,13 @@ const subdivisionContent: Record<string, string[]> = {
                       setActiveIndex(idx)
                       startInterval()
                     }}
-                    className={`shrink-0 hover:cursor-pointer rounded-full flex flex-col items-center justify-center transition-all duration-300 lg:w-[240px] lg:h-[240px] w-[102px] h-[102px] ${idx !== 0 ? 'lg:-ml-[55px] -ml-4' : ''} ${
-                      active || hoveredIndex === idx ? 'bg-[#FFFFFF66]' : 'bg-none hover:bg-[#FFFFFF66] transition-all duration-300'
+                    className={`group shrink-0 hover:cursor-pointer rounded-full flex flex-col items-center justify-center transition-all duration-300 lg:w-[240px] lg:h-[240px] w-[102px] h-[102px] ${idx !== 0 ? 'lg:-ml-[55px] -ml-4' : ''} ${
+                      active || hoveredIndex === idx ? 'bg-[#FFFFFF33]' : 'bg-none hover:bg-[#FFFFFF33] transition-all duration-300'
                     }`}
                     aria-pressed={active}
                   >
-                    <div className={`lg:w-[130px] lg:h-[130px] w-[70px] h-[70px] rounded-full flex items-center justify-center ${active || hoveredIndex === idx ? 'bg-[#DCA447]' : 'bg-[#162B75] hover:bg-[#DCA447] transition-all duration-300'}`}>
-                      <span className="text-white lg:text-base lg:leading-[21px] text-[10px] leading-[13px] font-bold text-center lg:px-6 lg:py-[34px] px-[9.5px] py-3">
+                    <div className={`lg:w-[130px] lg:h-[130px] w-[70px] h-[70px] rounded-full flex items-center justify-center ${active || hoveredIndex === idx ? 'bg-[#DCA447]' : 'bg-[#F5F1E6] hover:bg-[#DCA447] transition-all duration-300'}`}>
+                      <span className={`transition-all duration-150 lg:text-base lg:leading-[21px] text-[10px] leading-[13px] font-bold text-center lg:px-4 lg:py-[34px] px-[4.5px] py-3 ${active || hoveredIndex === idx ? 'text-white' : 'text-[#162B75]'}`}>
                         {item.title}
                       </span>
                     </div>
@@ -148,7 +139,7 @@ const subdivisionContent: Record<string, string[]> = {
       </div>
       <div
         className="lg:hidden block h-[310px] w-full bg-bottom bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${activeImage})` }}
+        style={{ backgroundImage: `url(${activeZoneImage})` }}
       >
       </div>
     </section>
