@@ -92,15 +92,18 @@ const subdivisionContent: Record<string, string[]> = {
   return (
     <section className="w-full">
         <div
-          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[520px] h-[624px] bg-size-[60.8%_100%]"
+          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[540px] h-[624px] bg-size-[60.8%_100%]"
           style={{ backgroundImage: `url(${activeZoneImage})` }}
         >
         <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#162B75] z-0" />
 
         <div className="max-w-[1152px] mx-auto relative h-full">
-        <div className="flex flex-col gap-5 relative z-10 lg:max-w-[329px] xl:px-0 lg:px-[31.5px] max-w-full lg:pt-[30px] md:px-[31.5px] pt-[150px] px-[52.5px]">
-       <div className="flex flex-col gap-2.5 text-center"> <h2 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">Đăng ký nhận thông tin
-       THIẾT KẾ ĐIỂN HÌNH CỦA DỰ ÁN</h2>
+        <div className="flex flex-col gap-5 relative z-10 lg:max-w-[353px] xl:px-0 lg:px-[31.5px] max-w-full lg:pt-[30px] md:px-[31.5px] pt-[150px] px-[52.5px]">
+       <div className="flex flex-col gap-2.5 text-center"> 
+        <div className="flex flex-col">
+        <h2 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text">Đăng ký nhận thông tin</h2>
+        <h2 className="text-[22px] leading-[30px] text-[#DCA447] font-bold font-crimson-text"> THIẾT KẾ ĐIỂN HÌNH CỦA DỰ ÁN</h2>
+        </div>
        <p className="text-sm leading-6 text-white font-normal font-montserrat">Các tài liệu khách hàng nhận được gồm: Thiết kế và phương án ghép mẫu nhà mỡi nhất của dự án Vinhomes Hải Vân Bay</p></div>
         <ContactForm gapClass='gap-[15px]' ptClass='pt-[5px]' />
       </div>
