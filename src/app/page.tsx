@@ -10,6 +10,7 @@ import TravelCards from "@/components/TravelCard";
 import VideoProject from "@/components/VideoProject";
 import VinhomesProject from "@/components/VinhomesProject";
 import SplitFeature from "@/components/SplitFeature";
+import FormZone from "@/components/FormZone";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <ProjectZoning />
       <SplitFeature />
       <ProjectProducts />
-      <FormPrice />
+      <FormZone />
       <Gallery />
     </div>
   );
