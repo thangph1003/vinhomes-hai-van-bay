@@ -89,7 +89,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
   return (
     <>
       {/* TOP: Map + Right text */}
-      <section id="vi-tri-du-an" className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top md:h-[742px] h-[239px] z-[-1]">
+      <section id="vi-tri-du-an" className="relative bg-[url('/images/independent-position.webp')] bg-cover bg-left-top md:h-[742px] h-[239px] z-[2]">
         <div className="max-w-[1152px] mx-auto">
           <div className="md:w-[411px] flex flex-col md:justify-self-end absolute md:bottom-[135px] md:text-end z-1 bg-white p-5 md:bg-transparent md:p-0 mx-[22px] top-[207px]">
             <h2 className="md:text-[44px] text-[32px] md:leading-[57px] leading-[42px] text-[#162B75] font-bold font-crimson-text">VỊ TRÍ ĐỘC BẢN</h2>
@@ -100,8 +100,9 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
       </section>
 
       {/* MIDDLE: Cards */}
-      <div className="max-w-[1152px] mx-auto md:-mt-[107.5px] mt-[384px] overflow-hidden lg:px-[32.5px] xl:px-0">
-      <div ref={containerRef} className="flex lg:grid lg:grid-cols-4 lg:gap-6 gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] lg:ml-0 z-10" style={{ WebkitOverflowScrolling: "touch" }}>
+      <div className="w-full bg-white">
+        <div className="max-w-[1152px] mx-auto md:-mt-[107.5px] mt-[384px] overflow-hidden lg:px-[32.5px] xl:px-0 relative z-[3]">
+          <div ref={containerRef} className="flex lg:grid lg:grid-cols-4 lg:gap-6 gap-4 overflow-x-auto lg:overflow-visible hide-scrollbar snap-x snap-mandatory ml-[33px] lg:ml-0 z-10" style={{ WebkitOverflowScrolling: "touch" }}>
           {cards.map((card, idx) => {
             const fromLeft = idx < 2
             const aos = fromLeft ? 'fade-right' : 'fade-left'
@@ -134,9 +135,11 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
           })}
         </div>
       </div>
+      </div>
 
       {/* BOTTOM: Left text + Right image */}
-      <section className="max-w-[1152px] mx-auto lg:px-[32.5px] xl:px-0 lg::pt-[37px] lg:pb-[98px] px-[33px] pt-[37px] pb-[32px] flex flex-col gap-[37px]">
+      <div className="w-full bg-white">
+        <section className="max-w-[1152px] mx-auto lg:px-[32.5px] xl:px-0 lg::pt-[37px] lg:pb-[98px] px-[33px] pt-[37px] pb-[32px] flex flex-col gap-[37px]">
         <div className="flex lg:flex-row flex-col gap-6">
             <div className="lg:w-1/2 w-full flex flex-col gap-[11px]">
                 <h2 className="md:text-[28px] text-[26px] md:leading-[36px] leading-[34px] font-bold font-crimson-text text-[#DCA447]">ĐÓN SÓNG HẠ TẦNG CHIẾN LƯỢC</h2>
@@ -162,6 +165,7 @@ export default function TravelCards({ cards = defaultCards }: { cards?: Card[] }
           </div>
         </div>
       </section>
+      </div>
     </>
   )
 }
