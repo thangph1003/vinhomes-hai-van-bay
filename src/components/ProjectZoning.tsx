@@ -27,7 +27,7 @@ export default function ProjectZoning({
     <section className="relative">
       <div className="w-full">
         <Image
-          src="/images/project-subdivision.webp"
+          src="/images/project-subdivisions.webp"
           alt={`${title} background`}
           width={1920}
           height={739}
