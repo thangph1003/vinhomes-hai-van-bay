@@ -33,8 +33,8 @@ export default function VideoProject() {
                 MỚI NHẤT</h2>
             </div>
             <div className="lg:w-[67.5%] w-full">
-                <p className="text-base leading-6 font-normal font-montserrat text-black">Với kinh nghiệm triển khai các dự án lớn như Vinhomes Riverside, Vinhomes Ocean Park, Vinhomes Global Gate... Vingroup cam kết đảm bảo tiến độ thi công đúng kế hoạch, đồng thời duy trì chất lượng xây dựng ở mức cao nhất.</p>
-                <p className="text-base leading-6 font-normal font-montserrat text-black">Vinhomes Làng Vân hiện đang trong giai đoạn chuẩn bị, với kế hoạch khởi công dự kiến vào tháng 3/2025. </p>
+                <p className="text-base leading-6 font-normal font-montserrat text-black">Với năng lực triển khai đã được kiểm chứng qua nhiều đại đô thị quy mô lớn, Vingroup cam kết kiểm soát chặt chẽ tiến độ và chất lượng ngay từ giai đoạn đầu.</p>
+                <p className="text-base leading-6 font-normal font-montserrat text-black">Theo kế hoạch dự kiến, Vinhomes Hải Vân Bay sẽ khởi công vào khoảng tháng 3/2025, tạo nền tảng cho quá trình phát triển bài bản và dài hạn tại khu vực Làng Vân.</p>
             </div>
             </div>
             <div className="w-full relative">

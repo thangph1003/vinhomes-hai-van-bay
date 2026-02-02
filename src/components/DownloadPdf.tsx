@@ -44,9 +44,7 @@ export default function DownloadSection() {
         
 
         <h2 className={`font-crimson-text lg:px-[172px] md:px-20 px-0 md:text-[22px] text-[21px] font-semibold md:leading-[29px] leading-[27px] text-center text-[#162B75]`}>
-          Vinhomes Hải Vân Bay là một trong những dự án bất động sản nghỉ dưỡng nổi bật nhất
-          tại Đà Nẵng, được phát triển bởi Tập đoàn Vingroup - thương hiệu hàng đầu trong lĩnh
-          vực bất động sản Việt nam
+        Vinhomes Làng Vân (Vinhomes Hải Vân Bay) là đại đô thị nghỉ dưỡng – du lịch – giải trí do Vingroup phát triển tại Làng Vân, Đà Nẵng, nắm giữ vị trí độc bản tại khu vực cửa ngõ Hải Vân – nơi hội tụ biển, núi và trục phát triển chiến lược của Đà Nẵng.
         </h2>
 
 
