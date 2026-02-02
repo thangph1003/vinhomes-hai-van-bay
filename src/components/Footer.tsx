@@ -17,7 +17,7 @@ export default function Footer() {
             <div className='flex flex-col lg:gap-6 gap-5'>
             <div className="flex flex-col gap-2">
               <p className="text-lg leading-6 font-bold text-[#DCA447] font-montserrat">Điện thoại</p>
-              <Link href="tel:0935917037" className="text-lg leading-6 font-normal text-[#162B75] font-montserrat">0935 917 037</Link>
+              <Link href="tel:0964168134" className="text-lg leading-6 font-normal text-[#162B75] font-montserrat">0964.168.134</Link>
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-lg leading-6 font-bold text-[#DCA447] font-montserrat">Email</p>

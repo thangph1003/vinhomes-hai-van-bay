@@ -23,16 +23,13 @@ export default function VinhomesProject() {
         </div>
 
         <p className="text-[#000000] max-w-[808px] leading-[24px] text-[16px] text-center font-normal font-montserrat md:mt-[25px] lg:px-0 mt-[14px] pr-[31px] pl-[34px]">
-                Là dấu ấn tiếp theo trong hệ sinh thái bất động sản cao cấp của Vingroup, 
-                Vinhomes Hải Vân Bay mang theo triết lý phát triển sống xanh, sống tinh tuyển và sống kết nối.
+        Được định vị là đô thị ven biển mang tính biểu tượng tại khu vực Làng Vân - mở ra chuẩn mực sống mới dành cho cộng đồng tinh hoa và giới đầu tư dài hạn.
         </p>
       
         <div  className='max-w-[1151px] lg:mt-[30px] mt-[26px] px-[32px] xl:px-0 lg:mb-[74px] mb-[37px] flex lg:flex-row flex-col '>
           <div className='flex flex-col lg:w-[26.9%] w-auto lg:h-auto h-[69.2%] lg:px-[30px] lg:py-[40px] p-[33px] bg-[#FFFFFF] gap-[10px]'>
-            <h3 className='font-crimson-text font-bold lg:text-[28px] text-[24px] lg:leading-[36px] leading-[31px] text-[#DCA447] tracking-normal'>LƯNG TỰA NÚI MẶT HƯỚNG BIỂN</h3>
-            <p className='font-montserrat font-normal text-[16px] leading-[24px] tracking-normal'> Dự án hội tụ trọn vẹn hệ giá trị sống toàn diện: tiện ích đỉnh cao, dịch vụ chuyên biệt, cộng đồng chọn lọc, và trên hết là một phong cách sống 
-                  “gắn kết với thiên nhiên, đậm chất tinh hoa”. Với tầm nhìn hướng về phát triển bền vững và hội nhập quốc tế, dự án được kỳ vọng sẽ trở thành biểu tượng mới của miền Trung
-                  - điểm đến của cư dân tinh hoa, nhà đầu tư và du khách thế giới.</p>
+            <h3 className='font-crimson-text font-bold lg:text-[28px] text-[24px] lg:leading-[36px] leading-[31px] text-[#DCA447] tracking-normal'>LƯNG TỰA DI SẢN – MẶT HƯỚNG VỊNH</h3>
+            <p className='font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-black'>Nằm tại khu vực Làng Vân - Hải Vân, dự án được kiến tạo trên nền địa thế hiếm có, nơi núi rừng hùng vĩ ôm trọn vịnh biển nguyên sơ. Không gian sống được quy hoạch theo chuẩn mực đô thị biển cao cấp, hài hòa giữa thiên nhiên và tiện ích đồng bộ. Vin Làng Vân không chỉ là nơi an cư, mà còn là tài sản tích lũy giá trị bền vững cho các thế hệ.</p>
           </div>
 
           <div className="lg:w-[73.1%] w-auto lg:h-auto h-[30.8%]">

@@ -73,11 +73,11 @@ export default function Header() {
 
           {/* Contact Button */}
           <div className="hidden lg:flex lg:gap-2 items-center">
-            <Link href="tel:0935917037">
+            <Link href="tel:0964168134">
               <Image src="/images/icon-phone.svg" alt="Icon phone" width={35} height={35} className="w-[35px] h-[35px] object-cover" />
             </Link>
             <div className='flex flex-col'>
-              <Link  href="tel:0935917037" className='text-sm leading-5 font-normal font-montserrat text-[#162B75]'>Hotline:<span className='font-bold'> 0935 917 037</span></Link>
+              <Link  href="tel:0964168134" className='text-sm leading-5 font-normal font-montserrat text-[#162B75]'>Hotline:<span className='font-bold'> 0964.168.134</span></Link>
               <p className='text-xs leading-5 font-normal font-montserrat text-[#DCA447]'>7h30-20h00 (T2-T7)</p>
             </div>
           </div>

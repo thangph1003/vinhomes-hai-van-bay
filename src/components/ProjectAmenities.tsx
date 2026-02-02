@@ -29,14 +29,14 @@ export default function ProjectAmenities() {
          <Image src="/images/logo-cropped.png" alt='logo' width="62" height="57" className='md:w-[62px] md:h-[57px] w-[33px] h-[30px]'></Image>
 
           <h2 className="font-crimson-text md:px-0 px-[20px] w-full text-[#162B75] md:text-[44px] text-[32px] font-bold md:leading-[57px] leading-[42px] tracking-normal text-center">
-                MẶT BẰNG TIỆN ÍCH DỰ ÁN
+          QUY HOẠCH TIỆN ÍCH TÍCH HỢP
           </h2>
         </div>
       </div>
 
       <p className="text-[#000000] max-w-[808px] w-full leading-[24px] text-[16px] text-center font-normal font-montserrat md:mt-[25px] mt-[20px] md:mb-[40px] mb-[24px]">
-                Được kiến tạo theo mô hình “thành phố nghỉ dưỡng” giữa thiên nhiên nguyên bản, Vinhomes Hải Vân Bay gây ấn tượng với hệ tiện ích nội khu đẳng cấp, 
-                đồng thời ghi dấu bởi khả năng kết nối linh hoạt đến chuỗi tiện ích ngoại khu toàn diện.
+      Hệ tiện ích được quy hoạch theo logic “một điểm đến - nhiều trải nghiệm”: giáo dục, thương mại, wellness, nghỉ dưỡng và giải trí đặt trong cùng một tổng thể. Nhờ đó, cư dân Vin Làng Vân vừa tận hưởng tiện ích nội khu cao cấp, vừa thuận tiện kết nối các điểm dịch vụ - hạ tầng trọng yếu khu vực.
+
         </p>
       
         <Image
@@ -49,10 +49,9 @@ export default function ProjectAmenities() {
         />
 
         <div className='md:my-[30px] my-[20px] w-full flex lg:flex-row flex-col md:gap-[24px] gap-[10px]'>
-            <h2 className='lg:w-[23.8%] md:h-auto w-auto h-[27.3%] font-crimson-text font-bold md:text-[28px] text-[26px] leading-[38px] tracking-normal text-[#DCA447]'> SỐNG - NGHỈ DƯỠNG - GIẢI TRÍ ĐỈNH CAO </h2>
-            <p className='lg:w-[73.9%] md:h-auto w-auto h-[69%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Không dừng lại ở một “thành phố nghỉ dưỡng” mang quy mô quốc tế, Vinhomes Hải Vân Bay 
-                còn là không gian sống thượng lưu với hệ tiện ích nội khu được quy hoạch bài bản, đáp ứng trọn vẹn mọi nhu cầu từ an cư, nghỉ dưỡng đến giải trí 
-                - giáo dục - chăm sóc sức khỏe.</p>
+            <h2 className='lg:w-[23.8%] md:h-auto w-auto h-[27.3%] font-crimson-text font-bold md:text-[28px] text-[26px] leading-[38px] tracking-normal text-[#DCA447]'>CHUẨN SỐNG THƯỢNG LƯU BÊN VỊNH BIỂN            </h2>
+            <p className='lg:w-[73.9%] md:h-auto w-auto h-[69%] font-montserrat font-normal text-[16px] leading-[24px] tracking-normal text-[#000000]'> Vinhomes Hải Vân Bay hội tụ hệ sinh thái tiện ích quy mô hiếm có: Vinschool, Vincom Open Mall 16ha, Aquafield 2,6ha, quần thể Vinpearl 5*, VinWonders 24ha, beach club và tổ hợp trải nghiệm vách núi - biển. Một chuẩn sống kết hợp hài hòa giữa an cư, nghỉ dưỡng và đầu tư bền vững.
+            </p>
         </div>
 
         <div className="w-full mx-auto">

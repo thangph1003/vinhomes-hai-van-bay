@@ -14,27 +14,27 @@ const products: Product[] = [
     title: "BIỆT THỰ NGHỈ DƯỠNG",
     image: "/images/project-product-02.webp",
     bullets: [
-      "Gồm: Biệt thự ven biển, biệt thự liền kề, biệt thự ven đồi, bungalow",
-      "Thiết kế theo phong cách mở, gần gũi thiên nhiên, tối ưu tầm nhìn và riêng tư",
-      "Thích hợp để ở dài hạn hoặc đầu tư cho thuê vận hành nghỉ dưỡng",
+      "Gồm: biệt thự ven biển, biệt thự liền kề, biệt thự ven đồi và bungalow.",
+      "Thiết kế mở, hòa mình vào thiên nhiên, tối ưu tầm nhìn, đảm bảo riêng tư.",
+      "Phù hợp an cư dài hạn hoặc khai thác cho thuê nghỉ dưỡng cao cấp.",
     ],
   },
   {
     title: "SHOPHOUSE THƯƠNG MẠI",
     image: "/images/project-product-01.webp",
     bullets: [
-      "Bố trí tại các trục giao thương sôi động và là nơi tập trung đông khách du lịch",
-      "Mặt tiền rộng thoáng",
-      "Thiết kế hiện đại, lý tưởng cho kinh doanh nhà hàng, cafe, đặc sản, showroom...",
+      "Bố trí trên các trục giao thương sôi động, tập trung dòng khách du lịch và cư dân.",
+      "Mặt tiền rộng, không gian linh hoạt, dễ khai thác đa ngành nghề.",
+      "Phù hợp kinh doanh nhà hàng, café, đặc sản, showroom, dịch vụ du lịch.",
     ],
   },
   {
     title: "CĂN HỘ KHÁCH SẠN",
     image: "/images/project-product-03.webp",
     bullets: [
-      "Kiến trúc mang phong cách Indochine hiện đại",
-      "Đa dạng diện tích, tối ưu hướng biển và không gian sinh thái",
-      "Tích hợp sàn dịch vụ lưu trú cao cấp, quản lý vận hành theo tiêu chuẩn quốc tế",
+      "Kiến trúc Indochine đương đại, hài hòa giữa sang trọng và bản sắc.",
+      "Đa dạng diện tích, tối ưu hướng biển và cảnh quan sinh thái.",
+      "Vận hành theo tiêu chuẩn quốc tế, phù hợp đầu tư lưu trú và sinh lời bền vững.",
     ],
   },
 ];
