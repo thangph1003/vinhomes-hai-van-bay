@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-2">
               <p className="text-lg leading-6 font-bold text-[#DCA447] font-montserrat">Email</p>
-              <Link href="mailTo:info@gmail.com" className="text-lg leading-6 font-normal text-[#162B75] font-montserrat">info@gmail.com</Link>
+              <Link href="mailTo:fbgland.marketing@gmail.com" className="text-lg leading-6 font-normal text-[#162B75] font-montserrat">fbgland.marketing@gmail.com</Link>
             </div>
 
             {/* Contact form component */}
