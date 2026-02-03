@@ -116,7 +116,6 @@ export default function FormZone({
         </div>
       </div>
 
-      {/* Desktop 完整布局 */}
       <div
         className="hidden lg:block w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[540px] bg-size-[60.8%_100%]"
         style={{ backgroundImage: `url(${activeZoneImage})` }}
