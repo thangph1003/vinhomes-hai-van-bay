@@ -9,10 +9,10 @@ export function generateMetadata(): Metadata {
 
   return {
     title: {
-      default: "Vinhomes Làng Vân (Hải Vân Bay): Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
+      default: "Vinhomes Làng Vân - Hải Vân Bay: Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
       template: "%s | Vinhomes Hải Vân Bay"
     },
-    description: "Vinhomes Làng Vân (Vinhomes Hải Vân Bay) là đại đô thị nghỉ dưỡng ven biển do Vingroup phát triển, định hình không gian sống chất lượng cao và giá trị tích lũy dài hạn.",
+    description: "Vinhomes Làng Vân - Vinhomes Hải Vân Bay là đại đô thị nghỉ dưỡng ven biển do Vingroup phát triển, định hình không gian sống chất lượng cao và giá trị tích lũy dài hạn.",
     keywords: ["Vinhomes", "Hải Vân Bay", "căn hộ", "Đà Nẵng", "ven biển", "cao cấp", "bất động sản"],
     authors: [{ name: "Vinhomes" }],
     creator: "Vinhomes",
@@ -44,8 +44,8 @@ export function generateMetadata(): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Vinhomes Làng Vân (Hải Vân Bay): Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
-      description: "Vinhomes Làng Vân (Vinhomes Hải Vân Bay) là đại đô thị nghỉ dưỡng ven biển do Vingroup phát triển, định hình không gian sống chất lượng cao và giá trị tích lũy dài hạn.",
+      title: "Vinhomes Làng Vân - Hải Vân Bay: Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
+      description: "Vinhomes Làng Vân - Vinhomes Hải Vân Bay là đại đô thị nghỉ dưỡng ven biển do Vingroup phát triển, định hình không gian sống chất lượng cao và giá trị tích lũy dài hạn.",
       images: [ogUrl],
       creator: "@vinhomes",
     },
