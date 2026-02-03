@@ -27,7 +27,7 @@ export function generateMetadata(): Metadata {
       canonical: `${SITE_URL}`,
     },
     openGraph: {
-      title: "Vinhomes Làng Vân (Hải Vân Bay): Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
+      title: "Vinhomes Làng Vân - Hải Vân Bay: Dự Án Nghỉ Dưỡng Ven Biển Đà Nẵng",
       description: "Vinhomes Làng Vân (Vinhomes Hải Vân Bay) là đại đô thị nghỉ dưỡng ven biển do Vingroup phát triển, định hình không gian sống chất lượng cao và giá trị tích lũy dài hạn.",
       url: SITE_URL,
       siteName: "Vinhomes Hải Vân Bay",

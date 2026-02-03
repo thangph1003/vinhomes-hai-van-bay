@@ -86,7 +86,7 @@ const subdivisionContent: Record<string, string[]> = {
   return (
     <section className="w-full">
         <div
-          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[624px] bg-size-[62.8%_100%]"
+          className="w-full relative bg-right bg-no-repeat lg:h-[714px] md:h-[460px] h-[670px] bg-size-[62.8%_100%]"
           style={{ backgroundImage: `url(${activeImage})` }}
         >
         <div className="absolute inset-y-0 left-0 lg:w-[37.2%] w-full [@media(min-width:1440px)]:w-[40%] bg-[#F5F1E6] z-0" />
