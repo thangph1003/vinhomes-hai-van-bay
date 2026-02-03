@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 type Product = {
   title: string;
@@ -41,8 +41,32 @@ const products: Product[] = [
 
 export default function ProjectProducts() {
   const [idx, setIdx] = useState(0)
+  const touchStartX = useRef<number | null>(null)
+
   const prev = () => setIdx((i) => (i - 1 + products.length) % products.length)
   const next = () => setIdx((i) => (i + 1) % products.length)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+
+    const touchEndX = e.changedTouches[0].clientX
+    const diff = touchStartX.current - touchEndX
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        next()
+      } else {
+        prev()
+      }
+    }
+
+    touchStartX.current = null
+  }
+
   return (
     <section id="san-pham-chinh" className="bg-[#F6E9D5] md:py-[50px] px-[31.5px] py-[30px]">
       <div className="max-w-[1152px] mx-auto flex flex-col md:gap-10 gap-5">
@@ -56,9 +80,13 @@ export default function ProjectProducts() {
           </p>
         </div>
 
-        {/* Mobile carousel inline (prev / next) */}
+        {/* Mobile carousel with swipe support */}
         <div className="lg:hidden">
-          <div className="relative">
+          <div 
+            className="relative"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             {(() => {
               const p = products[idx]
               return (
@@ -80,11 +108,11 @@ export default function ProjectProducts() {
                     </div>
                   </article>
                   <button aria-label="Previous" onClick={prev} className="absolute left-[-30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px]">
-             <Image src="/images/iconPre.svg" alt="Pre" width={30} height={30} />
-            </button>
-            <button aria-label="Next" onClick={next} className="absolute right-[-30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px]">
-            <Image src="/images/iconNext.svg" alt="Pre" width={30} height={30} />
-            </button>
+                    <Image src="/images/iconPre.svg" alt="Previous" width={30} height={30} />
+                  </button>
+                  <button aria-label="Next" onClick={next} className="absolute right-[-30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px]">
+                    <Image src="/images/iconNext.svg" alt="Next" width={30} height={30} />
+                  </button>
                 </>
               )
             })()}
