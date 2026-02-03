@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /
-
-# Block all web crawlers from accessing the site
+Disallow:
