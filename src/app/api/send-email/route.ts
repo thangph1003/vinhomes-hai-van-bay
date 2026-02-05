@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     const smtpUser = process.env.SMTP_USER
     const smtpPass = process.env.SMTP_PASS
     const emailFrom = process.env.EMAIL_FROM ?? smtpUser
-    const emailTo = process.env.EMAIL_TO ?? email
+    const emailTo = process.env.EMAIL_TO?.split(',').map(e => e.trim()) ?? [email]
 
     if (!smtpHost || !smtpUser || !smtpPass) {
       return NextResponse.json(
@@ -73,6 +73,9 @@ export async function POST(req: Request) {
         { status: 500 }
       )
     }
+
+    // Support CC email
+    const emailCc = process.env.EMAIL_CC
 
     const nodemailer = await import('nodemailer')
 
@@ -146,6 +149,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: emailFrom,
       to: emailTo,
+      cc: emailCc,
       subject,
       text,
       html,

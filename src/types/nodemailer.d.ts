@@ -4,6 +4,7 @@ declare module 'nodemailer' {
     from?: string
     to?: string | string[]
     subject?: string
+    cc?: string | string[]
     text?: string
     html?: string
   }
